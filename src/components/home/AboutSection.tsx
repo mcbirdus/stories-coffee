@@ -50,7 +50,7 @@ const AboutSection = () => {
             
             <div className="absolute -bottom-6 -right-6 w-36 h-36 md:w-48 md:h-48 bg-stories-green rounded-2xl p-6 glass flex flex-col justify-center text-white shadow-lg">
               <Coffee className="h-8 w-8 mb-2" />
-              <span className="text-lg md:text-xl font-bold">Est. 2016</span>
+              <span className="text-lg md:text-xl font-bold">Est. 2025</span>
               <p className="text-sm text-white/80">Serving Sydney's finest coffee</p>
             </div>
           </div>
@@ -74,18 +74,16 @@ const AboutSection = () => {
               "text-stories-dark/70 dark:text-white/70 mb-6",
               isVisible ? "opacity-0 animate-fade-up delay-200" : "opacity-0"
             )}>
-              Stories Coffee was born from a simple idea: that every cup of coffee has a story to tell. 
-              Founded in 2016 in the heart of Sydney, we set out to create a space where 
-              exceptional coffee, delicious food, and memorable moments come together.
+              Stories Coffee was founded in 2025 with a deep passion for coffee and food, backed by decades of experience.
+              We’ve perfected the art of brewing exceptional coffee and creating delicious, wholesome dishes like açaí bowls, smoothies, and sandwiches.
             </p>
             
             <p className={cn(
               "text-stories-dark/70 dark:text-white/70 mb-8",
               isVisible ? "opacity-0 animate-fade-up delay-300" : "opacity-0"
             )}>
-              Our commitment to quality drives everything we do - from sourcing the finest beans 
-              directly from farmers, to handcrafting each beverage with precision and care, 
-              to serving nourishing food made with locally-sourced ingredients.
+              Our commitment to quality is at the heart of everything we do, ensuring every bite and sip reflects our dedication to craftsmanship.
+              More than just a café, Stories Coffee is a space where great flavors and community come together to create memorable moments.
             </p>
             
             <Link to="/about">

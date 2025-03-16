@@ -50,17 +50,17 @@ const Header = () => {
       <div className="bg-gradient-to-r from-stories-green to-stories-green/80 text-white py-3 px-4 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjxwYXRoIGQ9Ik0xNiA0YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDQtMS44IDQtNCA0LTQtMS44LTQtNHoiLz48cGF0aCBkPSJNMzYgMTRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
         
-        <div className="animate-bounce absolute left-8 top-1/2 -translate-y-1/2 hidden md:block">
-          <Sparkles className="h-6 w-6 text-yellow-200" />
+        <div className="animate-bounce absolute left-80 top-1/2 -translate-y-1/2 hidden md:block">
+          <Sparkles className="h-6 w-6 text-white-200" />
         </div>
         
-        <div className="animate-bounce absolute right-8 top-1/2 -translate-y-1/2 hidden md:block">
-          <Gift className="h-6 w-6 text-yellow-200" />
+        <div className="animate-bounce absolute right-80 top-1/2 -translate-y-1/2 hidden md:block">
+          <Gift className="h-6 w-6 text-white-200" />
         </div>
         
         <p className="font-medium relative z-10 flex items-center justify-center gap-2">
-          <Sparkles className="h-5 w-5 text-yellow-200 inline md:hidden" />
-          <span className="text-sm md:text-base animate-pulse">Our app is coming soon, stay tuned for an enhanced coffee experience!</span>
+        <Sparkles className="h-5 w-5 text-yellow-200 inline md:hidden" />
+          <span className="text-sm md:text-base animate-pulse">Our app is coming soon, so stay tuned for an enhanced coffee cups  & açaí bowls experience!</span>
           <Gift className="h-5 w-5 text-yellow-200 inline md:hidden" />
         </p>
       </div>
@@ -72,7 +72,7 @@ const Header = () => {
             <img
               src="https://res.cloudinary.com/dkuvvyaly/image/upload/v1742093718/STORIES_COFFEE_co_ya1q35.png"
               alt="Stories Coffee"
-              className="h-14 lg:h-16 object-contain"
+              className="h-14 lg:h-12 object-contain"
             />
           </Link>
 

@@ -14,21 +14,21 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Laith Ab'd",
     role: "Regular Customer",
     text: "Stories Coffee is my daily ritual! Their açaí bowls are the perfect balance of flavors and textures, and the staff always remembers my name and order.",
     rating: 5
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Sunil Dhakal",
     role: "Food Blogger",
     text: "As someone who reviews cafés professionally, I can say that Stories Coffee stands out for their attention to detail and commitment to quality in every single cup.",
     rating: 5
   },
   {
     id: 3,
-    name: "Emma Wilson",
+    name: "Emma Warren",
     role: "Local Artist",
     text: "I come to Stories Coffee to find inspiration. The atmosphere is perfect for creativity, and their seasonal menu always has something new to discover.",
     rating: 5
