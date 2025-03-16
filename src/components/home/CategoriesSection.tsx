@@ -18,57 +18,73 @@ const categories: Category[] = [
     name: "Açaí",
     icon: Cherry,
     slug: "acai",
-    description: "Refresh with our superfood bowls"
   },
   {
     id: 2,
-    name: "Coffee",
-    icon: Coffee,
-    slug: "coffee",
-    description: "Expertly crafted specialty brews"
-  },
-  {
-    id: 3,
-    name: "Teas",
-    icon: Leaf,
-    slug: "teas",
-    description: "Premium loose leaf varieties"
-  },
-  {
-    id: 4,
-    name: "Smoothies",
-    icon: GlassWater,
-    slug: "smoothies",
-    description: "Fresh fruit & veggie blends"
-  },
-  {
-    id: 5,
-    name: "Sandwiches",
-    icon: Sandwich,
-    slug: "sandwiches",
-    description: "Handcrafted with quality ingredients"
-  },
-  {
-    id: 6,
     name: "Main Menu",
     icon: BookOpen,
     slug: "main-menu",
-    description: "Our chef's special creations"
+  },
+  {
+    id: 3,
+    name: "Sandwiches",
+    icon: Sandwich,
+    slug: "sandwiches",
+  },
+  {
+    id: 4,
+    name: "Coffee",
+    icon: Coffee,
+    slug: "coffee",
+  },
+  {
+    id: 5,
+    name: "Iced Coffee",
+    icon: GlassWater,
+    slug: "iced-coffee",
+  },
+  {
+    id: 6,
+    name: "Teas",
+    icon: Leaf,
+    slug: "teas",
   },
   {
     id: 7,
-    name: "Iced Drinks",
+    name: "Smoothies",
     icon: GlassWater,
-    slug: "iced-drinks",
-    description: "Cool down with our signature drinks"
+    slug: "smoothies",
   },
   {
     id: 8,
-    name: "Pastries",
-    icon: CakeSlice,
-    slug: "pastries",
-    description: "Fresh baked daily in-house"
-  }
+    name: "Speciality",
+    icon: GlassWater,
+    slug: "speciality",
+  },
+  {
+    id: 9,
+    name: "Cold Pressed Juices",
+    icon: GlassWater,
+    slug: "cold-pressed-juices",
+  },
+  {
+    id: 10,
+    name: "Kombucha",
+    icon: GlassWater,
+    slug: "kombucha",
+  },
+  {
+    id: 11,
+    name: "Flavoured Sparkling",
+    icon: GlassWater,
+    slug: "flavoured-sparkling",
+  },
+  {
+    id: 11,
+    name: "Catering",
+    icon: Sandwich,
+    slug: "catering",
+  },
 ];
 
 const CategoriesSection = () => {

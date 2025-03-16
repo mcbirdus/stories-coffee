@@ -25,11 +25,11 @@ const blogPosts: BlogPost[] = [
     id: 1,
     title: "The Art of Crafting the Perfect Espresso",
     excerpt: "Explore the science and skill behind brewing the perfect shot of espresso, from bean selection to extraction techniques.",
-    author: "Emily Chen",
+    author: "Sonya Glen",
     date: "June 15, 2023",
     category: "Coffee Brewing",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aedda?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742114865/mohamed-shaffaf-RZJRWMnd0DM-unsplash_cppefr.jpg",
     featured: true
   },
   {
@@ -40,7 +40,7 @@ const blogPosts: BlogPost[] = [
     date: "May 28, 2023",
     category: "Nutrition",
     readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1546039907-7fa05f864c02?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742115259/jakob-owens-e3FJ-KVZvEw-unsplash_bgfjon.jpg",
     featured: true
   },
   {
@@ -71,7 +71,7 @@ const blogPosts: BlogPost[] = [
     date: "February 15, 2023",
     category: "Coffee Culture",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742114614/sameer-waskar-mcAekN2kBw4-unsplash_od5vu8.jpg"
   },
   {
     id: 6,
@@ -91,7 +91,7 @@ const blogPosts: BlogPost[] = [
     date: "December 12, 2022",
     category: "Coffee Brewing",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1499961024600-ad094db305cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742115332/jisu-han-TVoeqhWz2mE-unsplash_fmjoyv.jpg"
   },
   {
     id: 8,

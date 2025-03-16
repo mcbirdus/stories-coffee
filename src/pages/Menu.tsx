@@ -92,6 +92,12 @@ const categories: Category[] = [
     icon: GlassWater,
     slug: "flavoured-sparkling",
   },
+  {
+    id: 11,
+    name: "Catering",
+    icon: GlassWater,
+    slug: "catering",
+  },
 ];
 
 const menuItems: MenuItem[] = [
@@ -208,7 +214,7 @@ const menuItems: MenuItem[] = [
   {
     id: 13,
     name: "Espresso",
-    price: "S $4.50 | M $5.00 | L $5.50",
+    price: "$5.00",
     description: "",
     category: "coffee",
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
@@ -216,7 +222,7 @@ const menuItems: MenuItem[] = [
   {
     id: 14,
     name: "Piccolo",
-    price: "S $4.50 | M $5.00 | L $5.50",
+    price: "$5.00",
     description: "",
     category: "coffee",
     isPopular: true,
@@ -225,7 +231,7 @@ const menuItems: MenuItem[] = [
   {
     id: 15,
     name: "Macchiato",
-    price: "S $4.50 | M $5.00 | L $5.50",
+    price: "$5.00",
     description: "",
     category: "coffee",
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
@@ -274,6 +280,14 @@ const menuItems: MenuItem[] = [
   },  {
     id: 21,
     name: "Hot Chocolate",
+    price: "S $4.50 | M $5.00 | L $5.50",
+    description: "",
+    category: "coffee",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },  {
+    id: 67,
+    name: "Add-ons",
     price: "S $4.50 | M $5.00 | L $5.50",
     description: "",
     category: "coffee",

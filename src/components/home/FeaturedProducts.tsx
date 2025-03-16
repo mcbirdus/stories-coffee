@@ -20,8 +20,8 @@ const featuredProducts: Product[] = [
     id: 1,
     name: "Macchiato",
     category: "Coffee",
-    price: "$5.00",
-    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    price: "S $4.50 | M $5.00 | L $5.50",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742116017/nathan-dumlao-4QaNg9pu3nk-unsplash_a7rrkl.jpg",
     rating: 4.7,
     featured: true
   },
@@ -36,10 +36,10 @@ const featuredProducts: Product[] = [
   },
   {
     id: 3,
-    name: "Ham, Cheese & Avocado Toast",
+    name: "Mortadella",
     category: "Sandwiches",
     price: "$14.00",
-    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914161/monteverdo-barnsley-BXNctQYqPOc-unsplash_ae6rfh.jpg",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742116429/amirali-mirhashemian-Ea_IbQfxm-0-unsplash_ejxjik.jpg",
     rating: 4.8,
     featured: true
   },
@@ -47,8 +47,8 @@ const featuredProducts: Product[] = [
     id: 4,
     name: "Lemongrass Ginger",
     category: "Teas",
-    price: "$5.00",
-    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914081/pariwat-pannium-EgDkl00Hiqw-unsplash_qlnjjs.jpg",
+    price: "$6.00",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742116489/jennifer-schmidt-yrNg91a3Opk-unsplash_mgwuwy.jpg",
     rating: 4.6,
     featured: true
   }

@@ -31,7 +31,7 @@ const galleryImages = [
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1542326891-c424229d29b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    url: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105430/jamie-street-qpN5MLx1uwk-unsplash_csnj6u.jpg",
     category: "interior",
     caption: "Cozy atmosphere"
   },
@@ -43,7 +43,7 @@ const galleryImages = [
   },
   {
     id: 7,
-    url: "https://images.unsplash.com/photo-1619544161453-375d391fa519?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    url: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742102673/mariana-medvedeva-fk6IiypMWss-unsplash_bp3bas.jpg",
     category: "food",
     caption: "Breakfast delights"
   },

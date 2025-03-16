@@ -8,10 +8,10 @@ import { cn } from "@/lib/utils";
 const stats = [
   { 
     id: 1, 
-    value: "5+", 
+    value: "25+", 
     label: "Years of Experience", 
     icon: Coffee,
-    description: "Serving Sydney since 2018" 
+    description: "With over 2 decades in the food industry" 
   },
   { 
     id: 2, 
@@ -145,10 +145,9 @@ const About = () => {
                   <div className="animate-fade-in">
                     <h2 className="text-3xl font-bold mb-6 font-playfair">The Stories Behind the Cups</h2>
                     <p className="text-stories-dark/70 dark:text-white/70 mb-6">
-                      Founded in 2018, Stories Coffee was born from a simple yet profound idea: every cup of coffee has a story to tell. Our journey began when our founders, Emily and James, traveled through coffee-growing regions in South America and fell in love with the rich cultural narratives surrounding coffee cultivation.
-                    </p>
-                    <p className="text-stories-dark/70 dark:text-white/70 mb-6">
-                      What started as a small pop-up cart in Sydney markets quickly grew into our flagship store in World Square. We named it "Stories" because we believe that coffee brings people together, creating moments where stories are shared, connections are made, and memories are created.
+                    Though Stories Coffee was founded just recently in 2025, our founders bring decades of experience in the coffee and food industries. We've spent years perfecting our craft, from expertly brewing coffee to creating delicious, healthy bowls and drinks. Our journey has given us an in-depth understanding of what makes great food and drink, and we’ve poured that knowledge and passion into every item we offer.
+
+Each Açaí bowl, sandwich, smoothie, and coffee is made with the utmost care and attention to detail. Every recipe is crafted from years of experience, ensuring that every bite and sip not only tastes amazing but reflects our commitment to quality. At Stories Coffee, we may be new, but our expertise is deep, and we know how to create the perfect balance of flavors to make your visit unforgettable.
                     </p>
                     <p className="text-stories-dark/70 dark:text-white/70">
                       Today, Stories Coffee has evolved into more than just a café. It's a community hub where the art of coffee is celebrated alongside nutritious açaí bowls and wholesome food, all served in a space designed to inspire conversation and creativity.
@@ -163,7 +162,7 @@ const About = () => {
                     <div className="mb-6">
                       <h3 className="text-xl font-bold mb-2">Mission</h3>
                       <p className="text-stories-dark/70 dark:text-white/70">
-                        To create a space where exceptional coffee and food bring people together, fostering community and conversation while supporting sustainable practices throughout our supply chain.
+                        To create a space where exceptional coffee and food bring people together, fostering connection and conversation. With decades of experience in the industry, we’ve carefully crafted every aspect of our menu to ensure quality and flavor. We are committed to supporting sustainable practices throughout our supply chain, so you can enjoy every bite and sip knowing that we’re dedicated to both your experience and the planet.
                       </p>
                     </div>
                     <div className="space-y-4">
@@ -217,6 +216,7 @@ const About = () => {
                 )}
 
                 {/* Our Team Tab */}
+                {/* 
                 {activeTab === "team" && (
                   <div className="animate-fade-in">
                     <h2 className="text-3xl font-bold mb-6 font-playfair">The Faces Behind Stories</h2>
@@ -255,6 +255,7 @@ const About = () => {
                     </div>
                   </div>
                 )}
+                  */}
               </div>
             </div>
           </div>

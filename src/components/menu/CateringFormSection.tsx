@@ -73,7 +73,7 @@ const CateringFormSection = () => {
               Let Us Cater Your Next Event
             </h2>
             <p className="text-stories-dark/70 dark:text-white/70 text-lg">
-              From intimate gatherings to corporate events, we offer custom catering services tailored to your needs. Fill out the form and we'll get back to you within 1 business hour.
+            From intimate gatherings to corporate events, we offer custom catering services tailored to your needs. Please place your catering order 48 hours prior to your event date. Fill out the form and we'll get back to you within 1 business hour.
             </p>
             
             <div className="space-y-4 pt-4">
