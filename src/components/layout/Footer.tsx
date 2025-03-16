@@ -1,8 +1,6 @@
 
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +8,9 @@ const Footer = () => {
   return (
     <footer className="bg-stories-dark text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Logo and about */}
-          <div className="md:col-span-1 lg:col-span-1">
+          <div className="md:col-span-1">
             <Link to="/" className="inline-block mb-4">
               <img
                 src="https://res.cloudinary.com/dkuvvyaly/image/upload/v1742093718/STORIES_COFFEE_co_ya1q35.png"
@@ -109,24 +107,6 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-lg font-bold mb-4 font-playfair">Newsletter</h3>
-            <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter to get updates on our latest offers.
-            </p>
-            <div className="flex space-x-2">
-              <Input
-                type="email"
-                placeholder="Your email"
-                className="bg-white/10 border-white/20 focus:border-stories-green text-white"
-              />
-              <Button className="bg-stories-green hover:bg-stories-green/90">
-                Subscribe
-              </Button>
-            </div>
           </div>
         </div>
 
