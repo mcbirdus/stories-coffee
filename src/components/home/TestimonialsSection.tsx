@@ -1,13 +1,12 @@
 
 import { useEffect, useRef, useState } from "react";
-import { Star } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Testimonial {
   id: number;
   name: string;
   role: string;
-  image: string;
   text: string;
   rating: number;
 }
@@ -17,7 +16,6 @@ const testimonials: Testimonial[] = [
     id: 1,
     name: "Sarah Johnson",
     role: "Regular Customer",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
     text: "Stories Coffee is my daily ritual! Their açaí bowls are the perfect balance of flavors and textures, and the staff always remembers my name and order.",
     rating: 5
   },
@@ -25,7 +23,6 @@ const testimonials: Testimonial[] = [
     id: 2,
     name: "Michael Chen",
     role: "Food Blogger",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
     text: "As someone who reviews cafés professionally, I can say that Stories Coffee stands out for their attention to detail and commitment to quality in every single cup.",
     rating: 5
   },
@@ -33,7 +30,6 @@ const testimonials: Testimonial[] = [
     id: 3,
     name: "Emma Wilson",
     role: "Local Artist",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
     text: "I come to Stories Coffee to find inspiration. The atmosphere is perfect for creativity, and their seasonal menu always has something new to discover.",
     rating: 5
   }
@@ -85,32 +81,38 @@ const TestimonialsSection = () => {
             <div
               key={testimonial.id}
               className={cn(
-                "bg-white dark:bg-stories-dark p-8 rounded-xl shadow-md relative glass",
+                "bg-white dark:bg-stories-dark/80 p-8 rounded-xl shadow-md relative overflow-hidden",
                 isVisible && "opacity-0 animate-fade-up",
                 isVisible && `delay-${Math.min(index * 100, 300)}`
               )}
             >
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-stories-dark rounded-full p-1">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-              </div>
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-stories-green/5 rounded-bl-full"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 bg-stories-green/5 rounded-tr-full"></div>
               
-              <div className="mt-8 text-center">
+              <div className="relative z-10">
+                {/* Quote icon */}
+                <div className="flex justify-center mb-6">
+                  <div className="bg-stories-green/10 dark:bg-stories-green/20 h-12 w-12 rounded-full flex items-center justify-center">
+                    <Quote className="h-6 w-6 text-stories-green" />
+                  </div>
+                </div>
+                
                 <div className="flex justify-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-stories-gold fill-stories-gold" />
                   ))}
                 </div>
                 
-                <p className="text-stories-dark/80 dark:text-white/80 italic mb-6">
+                <p className="text-stories-dark/80 dark:text-white/80 italic mb-6 text-center">
                   "{testimonial.text}"
                 </p>
                 
-                <h4 className="font-bold text-lg">{testimonial.name}</h4>
-                <p className="text-sm text-stories-dark/60 dark:text-white/60">{testimonial.role}</p>
+                <div className="text-center">
+                  <div className="w-12 h-1 bg-stories-green mx-auto mb-4"></div>
+                  <h4 className="font-bold text-lg">{testimonial.name}</h4>
+                  <p className="text-sm text-stories-dark/60 dark:text-white/60">{testimonial.role}</p>
+                </div>
               </div>
             </div>
           ))}

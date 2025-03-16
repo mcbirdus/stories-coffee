@@ -334,7 +334,7 @@ const Menu = () => {
   return (
     <>
       <Header />
-      <main className="pt-32 pb-16">
+      <main className="pt-36 pb-16"> {/* Increased top padding for more margin */}
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12 opacity-0 animate-fade-in">
             <span className="inline-block px-4 py-1 rounded-full bg-stories-green/10 text-stories-green dark:bg-stories-green/20 text-sm font-medium mb-4">
@@ -384,7 +384,7 @@ const Menu = () => {
                 </Button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> {/* Changed grid to 4 columns and smaller gap */}
                 {filteredItems.map((item, index) => (
                   <div 
                     key={item.id}
@@ -393,7 +393,7 @@ const Menu = () => {
                       isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100, 700)}`
                     )}
                   >
-                    <div className="h-48 overflow-hidden relative">
+                    <div className="h-36 overflow-hidden relative"> {/* Reduced height from h-48 to h-36 */}
                       <img 
                         src={item.image} 
                         alt={item.name}
@@ -410,12 +410,12 @@ const Menu = () => {
                         </span>
                       )}
                     </div>
-                    <div className="p-4">
-                      <div className="flex justify-between items-start mb-2">
-                        <h3 className="font-bold text-lg">{item.name}</h3>
-                        <span className="font-medium text-stories-green">{item.price}</span>
+                    <div className="p-3"> {/* Reduced padding from p-4 to p-3 */}
+                      <div className="flex justify-between items-start mb-1"> {/* Reduced margin from mb-2 to mb-1 */}
+                        <h3 className="font-bold text-base">{item.name}</h3> {/* Reduced font size from text-lg to text-base */}
+                        <span className="font-medium text-stories-green text-sm">{item.price}</span> {/* Added text-sm */}
                       </div>
-                      <p className="text-stories-dark/70 dark:text-white/70 text-sm">
+                      <p className="text-stories-dark/70 dark:text-white/70 text-xs line-clamp-2"> {/* Reduced font size and added line clamp */}
                         {item.description}
                       </p>
                     </div>

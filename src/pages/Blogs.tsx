@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { Clock, User, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 interface BlogPost {

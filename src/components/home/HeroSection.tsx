@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Background patterns */}
       <div className="absolute inset-0 bg-grain-pattern opacity-5"></div>
       <div className="absolute -right-24 -top-24 w-96 h-96 bg-stories-green rounded-full opacity-20 blur-3xl"></div>
-      <div className="absolute -left-24 -bottom-24 w-96 h-96 bg-stories-gold rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute -left-24 -bottom-24 w-96 h-96 bg-stories-green/60 rounded-full opacity-10 blur-3xl"></div> {/* Changed from stories-gold to stories-green/60 */}
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">

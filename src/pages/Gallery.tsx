@@ -111,7 +111,7 @@ const Gallery = () => {
   return (
     <>
       <Header />
-      <main className="pt-32 pb-16">
+      <main className="pt-36 pb-16"> {/* Increased top padding for more margin */}
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="inline-block px-4 py-1 rounded-full bg-stories-green/10 text-stories-green dark:bg-stories-green/20 text-sm font-medium mb-4">
