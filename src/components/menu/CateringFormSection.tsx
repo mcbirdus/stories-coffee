@@ -1,14 +1,12 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Utensils, Clock, Mail, Phone, Calendar } from "lucide-react";
+import { Utensils, Clock, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -19,6 +17,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 
+// Schema for form validation
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
@@ -33,7 +32,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 const CateringFormSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -49,15 +48,41 @@ const CateringFormSection = () => {
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    // Simulate API call with timeout
-    setTimeout(() => {
-      console.log(data);
-      setIsSubmitting(false);
-      form.reset();
+    try {
+      // Add email submission logic here (using EmailJS or another service)
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        body: JSON.stringify({
+          service_id: "stories-coffiee",
+          template_id: "stories-coffee-id",
+          user_id: "lpxBJ7uDB86v8Fl5J",
+          template_params: {
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            eventDate: data.eventDate,
+            guestCount: data.guestCount,
+            eventType: data.eventType,
+            message: data.message,
+          },
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send email.");
+      }
       toast.success("Catering request submitted", {
         description: "We'll get back to you within 1 business hour.",
       });
-    }, 1000);
+    } catch (error) {
+      toast.error("Failed to submit the form. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+      form.reset();
+    }
   };
 
   return (
@@ -73,9 +98,9 @@ const CateringFormSection = () => {
               Let Us Cater Your Next Event
             </h2>
             <p className="text-stories-dark/70 dark:text-white/70 text-lg">
-            From intimate gatherings to corporate events, we offer custom catering services tailored to your needs. Please place your catering order 48 hours prior to your event date. Fill out the form and we'll get back to you within 1 business hour.
+              From intimate gatherings to corporate events, we offer custom catering services tailored to your needs. Please place your catering order 48 hours prior to your event date. Fill out the form and we'll get back to you within 1 business hour.
             </p>
-            
+
             <div className="space-y-4 pt-4">
               <div className="flex items-center gap-3">
                 <div className="bg-stories-green/10 dark:bg-stories-green/20 h-10 w-10 rounded-full flex items-center justify-center">
@@ -86,7 +111,7 @@ const CateringFormSection = () => {
                   <p className="text-stories-dark/70 dark:text-white/70">Tailored to your preferences and dietary needs</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-3">
                 <div className="bg-stories-green/10 dark:bg-stories-green/20 h-10 w-10 rounded-full flex items-center justify-center">
                   <Calendar className="h-5 w-5 text-stories-green" />
@@ -96,7 +121,7 @@ const CateringFormSection = () => {
                   <p className="text-stories-dark/70 dark:text-white/70">Corporate events, weddings, birthdays, and more</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-3">
                 <div className="bg-stories-green/10 dark:bg-stories-green/20 h-10 w-10 rounded-full flex items-center justify-center">
                   <Clock className="h-5 w-5 text-stories-green" />
@@ -108,13 +133,15 @@ const CateringFormSection = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Right column - Form */}
           <div className="bg-white dark:bg-stories-dark rounded-xl p-6 shadow-lg">
             <h3 className="text-xl font-bold mb-6">Request Catering Information</h3>
-            
+
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                {/* Form Fields */}
+                {/* Name */}
                 <FormField
                   control={form.control}
                   name="name"
@@ -128,7 +155,8 @@ const CateringFormSection = () => {
                     </FormItem>
                   )}
                 />
-                
+
+                {/* Email and Phone */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <FormField
                     control={form.control}
@@ -143,7 +171,7 @@ const CateringFormSection = () => {
                       </FormItem>
                     )}
                   />
-                  
+
                   <FormField
                     control={form.control}
                     name="phone"
@@ -158,7 +186,8 @@ const CateringFormSection = () => {
                     )}
                   />
                 </div>
-                
+
+                {/* Event Date and Guest Count */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <FormField
                     control={form.control}
@@ -173,7 +202,7 @@ const CateringFormSection = () => {
                       </FormItem>
                     )}
                   />
-                  
+
                   <FormField
                     control={form.control}
                     name="guestCount"
@@ -188,7 +217,8 @@ const CateringFormSection = () => {
                     )}
                   />
                 </div>
-                
+
+                {/* Event Type */}
                 <FormField
                   control={form.control}
                   name="eventType"
@@ -213,36 +243,26 @@ const CateringFormSection = () => {
                     </FormItem>
                   )}
                 />
-                
+
+                {/* Message */}
                 <FormField
                   control={form.control}
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Additional Details</FormLabel>
+                      <FormLabel>Additional Information</FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="Tell us more about your event, special requests, dietary restrictions, etc."
-                          className="min-h-[100px]"
-                          {...field}
-                        />
+                        <Textarea placeholder="Additional notes or special requests" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                
-                <Button
-                  type="submit"
-                  className="w-full bg-stories-green hover:bg-stories-green/90 mt-2"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Submitting..." : "Request Catering Information"}
+
+                {/* Submit Button */}
+                <Button type="submit" disabled={isSubmitting} className="w-full mt-4">
+                  {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
-                
-                <p className="text-xs text-center text-stories-dark/50 dark:text-white/50">
-                  We'll respond to your inquiry within 1 business hour
-                </p>
               </form>
             </Form>
           </div>
