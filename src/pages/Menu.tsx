@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Header from "@/components/layout/Header";
@@ -6,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { Coffee, Cherry, Leaf, GlassWater, Sandwich, BookOpen, CakeSlice } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import CateringFormSection from "@/components/menu/CateringFormSection";
 
 interface Category {
   id: number;
@@ -298,13 +298,11 @@ const Menu = () => {
   const [isVisible, setIsVisible] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Check if a category hash is in the URL
   useEffect(() => {
     const hash = location.hash.replace('#', '');
     if (hash && categories.some(c => c.slug === hash)) {
       setSelectedCategory(hash);
       
-      // Scroll to menu items after a short delay
       setTimeout(() => {
         if (menuRef.current) {
           menuRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -313,7 +311,6 @@ const Menu = () => {
     }
   }, [location]);
 
-  // Filter menu items when category changes
   useEffect(() => {
     if (selectedCategory) {
       setFilteredItems(menuItems.filter(item => item.category === selectedCategory));
@@ -322,7 +319,6 @@ const Menu = () => {
     }
   }, [selectedCategory]);
 
-  // Animation on load
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -334,7 +330,7 @@ const Menu = () => {
   return (
     <>
       <Header />
-      <main className="pt-36 pb-16"> {/* Increased top padding for more margin */}
+      <main className="pt-36 pb-16">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12 opacity-0 animate-fade-in">
             <span className="inline-block px-4 py-1 rounded-full bg-stories-green/10 text-stories-green dark:bg-stories-green/20 text-sm font-medium mb-4">
@@ -346,7 +342,6 @@ const Menu = () => {
             </p>
           </div>
 
-          {/* Categories */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 opacity-0 animate-fade-in delay-200">
             {categories.map((category, index) => (
               <button
@@ -368,7 +363,6 @@ const Menu = () => {
             ))}
           </div>
 
-          {/* Menu Items */}
           {selectedCategory && (
             <div ref={menuRef} className="opacity-0 animate-fade-in delay-300">
               <div className="flex items-center justify-between mb-8">
@@ -384,7 +378,7 @@ const Menu = () => {
                 </Button>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> {/* Changed grid to 4 columns and smaller gap */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {filteredItems.map((item, index) => (
                   <div 
                     key={item.id}
@@ -393,7 +387,7 @@ const Menu = () => {
                       isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100, 700)}`
                     )}
                   >
-                    <div className="h-36 overflow-hidden relative"> {/* Reduced height from h-48 to h-36 */}
+                    <div className="h-36 overflow-hidden relative">
                       <img 
                         src={item.image} 
                         alt={item.name}
@@ -410,12 +404,12 @@ const Menu = () => {
                         </span>
                       )}
                     </div>
-                    <div className="p-3"> {/* Reduced padding from p-4 to p-3 */}
-                      <div className="flex justify-between items-start mb-1"> {/* Reduced margin from mb-2 to mb-1 */}
-                        <h3 className="font-bold text-base">{item.name}</h3> {/* Reduced font size from text-lg to text-base */}
-                        <span className="font-medium text-stories-green text-sm">{item.price}</span> {/* Added text-sm */}
+                    <div className="p-3">
+                      <div className="flex justify-between items-start mb-1">
+                        <h3 className="font-bold text-base">{item.name}</h3>
+                        <span className="font-medium text-stories-green text-sm">{item.price}</span>
                       </div>
-                      <p className="text-stories-dark/70 dark:text-white/70 text-xs line-clamp-2"> {/* Reduced font size and added line clamp */}
+                      <p className="text-stories-dark/70 dark:text-white/70 text-xs line-clamp-2">
                         {item.description}
                       </p>
                     </div>
@@ -425,7 +419,6 @@ const Menu = () => {
             </div>
           )}
 
-          {/* No Category Selected */}
           {!selectedCategory && (
             <div className="text-center max-w-2xl mx-auto mt-12 opacity-0 animate-fade-in delay-300">
               <h2 className="text-2xl font-bold mb-4">Select a Category Above</h2>
@@ -435,6 +428,8 @@ const Menu = () => {
             </div>
           )}
         </div>
+        
+        <CateringFormSection />
       </main>
       <Footer />
     </>

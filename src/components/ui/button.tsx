@@ -1,3 +1,4 @@
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -25,10 +26,15 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
       },
+      isLoading: {
+        true: "relative text-transparent transition-none hover:text-transparent [&_svg]:animate-spin [&_svg]:size-4 [&_svg]:shrink-0 [&::before]:absolute [&::before]:h-4 [&::before]:w-4 [&::before]:animate-spin [&::before]:border-2 [&::before]:border-current [&::before]:border-t-transparent [&::before]:rounded-full",
+        false: "",
+      },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
+      isLoading: false,
     },
   }
 )
@@ -37,15 +43,17 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
+  isLoading?: boolean
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, isLoading, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, isLoading, className }))}
         ref={ref}
+        disabled={isLoading || props.disabled}
         {...props}
       />
     )
