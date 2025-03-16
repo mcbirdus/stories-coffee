@@ -40,7 +40,7 @@ const blogPosts: BlogPost[] = [
     date: "May 28, 2023",
     category: "Nutrition",
     readTime: "7 min read",
-    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742115259/jakob-owens-e3FJ-KVZvEw-unsplash_bgfjon.jpg",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742122252/jakob-owens-e3FJ-KVZvEw-unsplash_kcqppz.jpg",
     featured: true
   },
   {
