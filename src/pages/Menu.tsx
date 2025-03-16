@@ -34,261 +34,677 @@ const categories: Category[] = [
   },
   {
     id: 2,
-    name: "Coffee",
-    icon: Coffee,
-    slug: "coffee",
-  },
-  {
-    id: 3,
-    name: "Teas",
-    icon: Leaf,
-    slug: "teas",
-  },
-  {
-    id: 4,
-    name: "Smoothies",
-    icon: GlassWater,
-    slug: "smoothies",
-  },
-  {
-    id: 5,
-    name: "Sandwiches",
-    icon: Sandwich,
-    slug: "sandwiches",
-  },
-  {
-    id: 6,
     name: "Main Menu",
     icon: BookOpen,
     slug: "main-menu",
   },
   {
+    id: 3,
+    name: "Sandwiches",
+    icon: Sandwich,
+    slug: "sandwiches",
+  },
+  {
+    id: 4,
+    name: "Coffee",
+    icon: Coffee,
+    slug: "coffee",
+  },
+  {
+    id: 5,
+    name: "Iced Coffee",
+    icon: Coffee,
+    slug: "iced-coffee",
+  },
+  {
+    id: 6,
+    name: "Teas",
+    icon: Leaf,
+    slug: "teas",
+  },
+  {
     id: 7,
-    name: "Iced Drinks",
+    name: "Smoothies",
     icon: GlassWater,
-    slug: "iced-drinks",
+    slug: "smoothies",
   },
   {
     id: 8,
-    name: "Pastries",
-    icon: CakeSlice,
-    slug: "pastries",
-  }
+    name: "Speciality",
+    icon: GlassWater,
+    slug: "speciality",
+  },
+  {
+    id: 9,
+    name: "Cold Pressed Juices",
+    icon: GlassWater,
+    slug: "cold-pressed-juices",
+  },
+  {
+    id: 10,
+    name: "Kombucha",
+    icon: GlassWater,
+    slug: "kombucha",
+  },
+  {
+    id: 11,
+    name: "Flavoured Sparkling",
+    icon: GlassWater,
+    slug: "flavoured-sparkling",
+  },
 ];
 
 const menuItems: MenuItem[] = [
   // Açaí Items
   {
     id: 1,
-    name: "Classic Açaí Bowl",
-    price: "$14.50",
-    description: "Organic açaí blended with banana, topped with granola, banana, strawberries and honey",
+    name: "Crushed Peanuts Bowl",
+    price: "$14.45",
+    description: "",
     category: "acai",
     isPopular: true,
-    image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
   },
   {
     id: 2,
-    name: "Tropical Açaí Bowl",
+    name: "Almont Silver Bowl",
     price: "$15.50",
-    description: "Organic açaí blended with mango and pineapple, topped with coconut flakes, fresh fruits and chia seeds",
+    description: "",
     category: "acai",
-    image: "https://images.unsplash.com/photo-1608032364895-84c5a9a04585?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
   },
   {
     id: 3,
-    name: "Protein Açaí Bowl",
+    name: "Crushed Oreo Bowl",
     price: "$16.50",
-    description: "Organic açaí blended with banana and protein powder, topped with almond butter, cacao nibs, and hemp seeds",
+    description: "",
     category: "acai",
     isNew: true,
-    image: "https://images.unsplash.com/photo-1598532213105-82606fde0feb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
+  },
+  {
+    id: 4,
+    name: "Biscoff Crushed Bowl",
+    price: "$16.50",
+    description: "",
+    category: "acai",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
+  },
+  {
+    id: 5,
+    name: "Coconut Flakes Bowl",
+    price: "$16.50",
+    description: "",
+    category: "acai",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
+  },
+  {
+    id: 6,
+    name: "Coco Pops Bowl",
+    price: "$16.50",
+    description: "",
+    category: "acai",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
+  },
+  {
+    id: 7,
+    name: "Chia Seeds Bowl",
+    price: "$16.50",
+    description: "",
+    category: "acai",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
+  },
+  {
+    id: 8,
+    name: "Sour Worms Bowl",
+    price: "$16.50",
+    description: "",
+    category: "acai",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
+  },
+  {
+    id: 9,
+    name: "Mini Mnms Bowl",
+    price: "$16.50",
+    description: "",
+    category: "acai",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
+  },
+  {
+    id: 10,
+    name: "Flakes Crumbs Bowl",
+    price: "$16.50",
+    description: "",
+    category: "acai",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
+  },
+  {
+    id: 11,
+    name: "Sour Bears Bowl",
+    price: "$16.50",
+    description: "",
+    category: "acai",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
+  },
+  {
+    id: 12,
+    name: "Nerds Bowl",
+    price: "$16.50",
+    description: "",
+    category: "acai",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
   },
   
   // Coffee Items
   {
-    id: 4,
+    id: 13,
     name: "Espresso",
-    price: "$4.00",
-    description: "Single shot of our signature house blend espresso",
+    price: "S $4.50 | M $5.00 | L $5.50",
+    description: "",
     category: "coffee",
-    image: "https://images.unsplash.com/photo-1585075368945-25f859d8e4ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
   },
   {
-    id: 5,
-    name: "Flat White",
-    price: "$5.00",
-    description: "Double shot of espresso with velvety steamed milk",
+    id: 14,
+    name: "Piccolo",
+    price: "S $4.50 | M $5.00 | L $5.50",
+    description: "",
     category: "coffee",
     isPopular: true,
-    image: "https://images.unsplash.com/photo-1555778586-061e5dee1f7c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
   },
   {
-    id: 6,
-    name: "Cold Brew",
-    price: "$5.50",
-    description: "Slow steeped for 24 hours, smooth and naturally sweet",
+    id: 15,
+    name: "Macchiato",
+    price: "S $4.50 | M $5.00 | L $5.50",
+    description: "",
     category: "coffee",
-    image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
   },
   {
-    id: 7,
-    name: "Stories Signature Latte",
-    price: "$6.00",
-    description: "Double shot espresso with house-made vanilla syrup and cinnamon",
+    id: 16,
+    name: "Long Black",
+    price: "S $4.50 | M $5.00 | L $5.50",
+    description: "",
     category: "coffee",
     isNew: true,
-    image: "https://images.unsplash.com/photo-1572286258217-140a383d75c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },
+  {
+    id: 17,
+    name: "Cappucino",
+    price: "S $4.50 | M $5.00 | L $5.50",
+    description: "",
+    category: "coffee",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },  {
+    id: 18,
+    name: "Latte",
+    price: "S $4.50 | M $5.00 | L $5.50",
+    description: "",
+    category: "coffee",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },  {
+    id: 19,
+    name: "Mocha",
+    price: "S $4.50 | M $5.00 | L $5.50",
+    description: "",
+    category: "coffee",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },  {
+    id: 20,
+    name: "Chai Latte",
+    price: "S $4.50 | M $5.00 | L $5.50",
+    description: "",
+    category: "coffee",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },  {
+    id: 21,
+    name: "Hot Chocolate",
+    price: "S $4.50 | M $5.00 | L $5.50",
+    description: "",
+    category: "coffee",
+    isNew: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
   },
   
   // Teas
   {
-    id: 8,
-    name: "Matcha Latte",
-    price: "$5.50",
-    description: "Premium Japanese matcha whisked with steamed milk",
+    id: 22,
+    name: "English Breakfast",
+    price: "$6.00",
+    description: "",
     category: "teas",
     isPopular: true,
-    image: "https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100801/mae-mu-kbch-i63YTg-unsplash_nspd5d.jpg"
   },
   {
-    id: 9,
-    name: "Earl Grey",
-    price: "$4.50",
-    description: "Black tea flavored with bergamot oil",
+    id: 23,
+    name: "Lemongrass Ginger",
+    price: "$6.00",
+    description: "",
     category: "teas",
-    image: "https://images.unsplash.com/photo-1565067958898-7218283fa18c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100801/mae-mu-kbch-i63YTg-unsplash_nspd5d.jpg"
   },
   {
-    id: 10,
-    name: "Chai Tea Latte",
-    price: "$5.50",
-    description: "Black tea infused with spices, steamed with milk",
+    id: 24,
+    name: "Peppermint",
+    price: "$6.00",
+    description: "",
     category: "teas",
-    image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100801/mae-mu-kbch-i63YTg-unsplash_nspd5d.jpg"
+  },
+  {
+    id: 25,
+    name: "Chamomile",
+    price: "$6.00",
+    description: "",
+    category: "teas",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100801/mae-mu-kbch-i63YTg-unsplash_nspd5d.jpg"
   },
   
   // Smoothies
   {
-    id: 11,
-    name: "Berry Bliss",
-    price: "$8.50",
-    description: "Mixed berries, banana, yogurt, and honey",
+    id: 26,
+    name: "Protein Smoothy",
+    price: "$7.00",
+    description: "",
     category: "smoothies",
-    image: "https://images.unsplash.com/photo-1553530666-5f4afd542f38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101031/joanna-kosinska-m741tj4Cz7M-unsplash_klrjab.jpg"
   },
   {
-    id: 12,
-    name: "Green Machine",
-    price: "$9.00",
-    description: "Spinach, kale, banana, pineapple, and coconut water",
+    id: 27,
+    name: "Green Smoothy",
+    price: "$7.00",
+    description: "",
     category: "smoothies",
-    isNew: true,
-    image: "https://images.unsplash.com/photo-1622597081555-83b655147591?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101031/joanna-kosinska-m741tj4Cz7M-unsplash_klrjab.jpg"
   },
   {
-    id: 13,
-    name: "Mango Tango",
-    price: "$8.50",
-    description: "Mango, pineapple, banana, and orange juice",
+    id: 28,
+    name: "Chocolate Shake",
+    price: "$7.00",
+    description: "",
     category: "smoothies",
-    isPopular: true,
-    image: "https://images.unsplash.com/photo-1577805947697-89e18249d767?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101031/joanna-kosinska-m741tj4Cz7M-unsplash_klrjab.jpg"
+  },
+  {
+    id: 29,
+    name: "Caramel Shake",
+    price: "$7.00",
+    description: "",
+    category: "smoothies",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101031/joanna-kosinska-m741tj4Cz7M-unsplash_klrjab.jpg"
   },
   
   // Sandwiches
   {
-    id: 14,
-    name: "Avocado & Halloumi",
-    price: "$12.00",
-    description: "Smashed avocado, grilled halloumi, roasted tomatoes, and spinach on sourdough",
+    id: 30,
+    name: "Poached Chicken Wrap",
+    price: "$14.00",
+    description: "Green goddess, lettuce, tomato, swiss cheese",
     category: "sandwiches",
     isPopular: true,
-    image: "https://images.unsplash.com/photo-1621800043295-a73fe2f57a11?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101621/eiliv-aceron-mAQZ3X_8_l0-unsplash_yjegkc.jpg"
   },
   {
-    id: 15,
-    name: "Chicken Pesto",
-    price: "$13.00",
-    description: "Grilled free-range chicken, basil pesto, roasted peppers, and mozzarella on ciabatta",
+    id: 31,
+    name: "Salmon Bagel",
+    price: "$14.00",
+    description: "Salmon, red onion, capers, dill, mayo & cream cheese",
     category: "sandwiches",
-    image: "https://images.unsplash.com/photo-1554433607-66b5efe9d304?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101621/eiliv-aceron-mAQZ3X_8_l0-unsplash_yjegkc.jpg"
   },
+  {
+    id: 32,
+    name: "Ham & Cheese",
+    price: "$14.00",
+    description: "Ham, swiss cheese, mayo & mustard sauce",
+    category: "sandwiches",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101621/eiliv-aceron-mAQZ3X_8_l0-unsplash_yjegkc.jpg"
+  },
+  {
+    id: 33,
+    name: "Salami and Coppa",
+    price: "$14.00",
+    description: "Eggplant, red onion, mesclun, chilli mayo, provolone",
+    category: "sandwiches",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101621/eiliv-aceron-mAQZ3X_8_l0-unsplash_yjegkc.jpg"
+  },
+  {
+    id: 34,
+    name: "Mortadella",
+    price: "$14.00",
+    description: "Rocket, pesto, stracciatella",
+    category: "sandwiches",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101621/eiliv-aceron-mAQZ3X_8_l0-unsplash_yjegkc.jpg"
+  },
+  {
+    id: 35,
+    name: "Tuna Mayo",
+    price: "$14.00",
+    description: "Tasty cheese, rocket, olive and capers",
+    category: "sandwiches",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101621/eiliv-aceron-mAQZ3X_8_l0-unsplash_yjegkc.jpg"
+  },
+  {
+    id: 36,
+    name: "Chicken Schnitzel Caesar Wrap",
+    price: "$14.00",
+    description: "Caesar dressing, lettuce, prosciutto, egg, parmesan",
+    category: "sandwiches",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101621/eiliv-aceron-mAQZ3X_8_l0-unsplash_yjegkc.jpg"
+  },
+  {
+    id: 37,
+    name: "Herb Chicken",
+    price: "$14.00",
+    description: "Lettuce, shallots, roasted almond, mayo",
+    category: "sandwiches",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101621/eiliv-aceron-mAQZ3X_8_l0-unsplash_yjegkc.jpg"
+  },
+  {
+    id: 38,
+    name: "Vegetarian Falafel Wrap",
+    price: "$14.00",
+    description: "Halloumi, beetroot, carrot, avocado, hummus",
+    category: "sandwiches",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101621/eiliv-aceron-mAQZ3X_8_l0-unsplash_yjegkc.jpg"
+  },
+
   
   // Main Menu Items
   {
-    id: 16,
-    name: "Smashed Avocado Toast",
+    id: 39,
+    name: "Bread & Spread",
+    price: "$7.00",
+    description: "One thick toast with choice of spreads",
+    category: "main-menu",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742102673/mariana-medvedeva-fk6IiypMWss-unsplash_bp3bas.jpg"
+  },
+  {
+    id: 40,
+    name: "Eggs in Toast",
+    price: "$13.00",
+    description: "Scrambled or field eggs on toast",
+    category: "main-menu",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742102673/mariana-medvedeva-fk6IiypMWss-unsplash_bp3bas.jpg"
+  },
+  {
+    id: 41,
+    name: "Bacon & Egg Roll",
+    price: "$12.00",
+    description: "Bacon, folded egg, cheese & BBQ - Aioli",
+    category: "main-menu",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742102673/mariana-medvedeva-fk6IiypMWss-unsplash_bp3bas.jpg"
+  },
+  {
+    id: 42,
+    name: "Haloumi & Egg Roll",
     price: "$14.00",
-    description: "Smashed avocado on sourdough with Persian feta, cherry tomatoes, and dukkah",
+    description: "Haloumi, avo, folded eggs, cheese & mayo",
     category: "main-menu",
     isPopular: true,
-    image: "https://images.unsplash.com/photo-1603046891744-56236a36fe5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742102673/mariana-medvedeva-fk6IiypMWss-unsplash_bp3bas.jpg"
   },
   {
-    id: 17,
-    name: "Eggs Benedict",
-    price: "$18.00",
-    description: "Poached eggs with hollandaise sauce and spinach on sourdough",
-    category: "main-menu",
-    image: "https://images.unsplash.com/photo-1608039790095-d8bea47485cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 18,
-    name: "Buddha Bowl",
+    id: 43,
+    name: "Avostories",
     price: "$16.00",
-    description: "Quinoa, roasted vegetables, avocado, chickpeas, and tahini dressing",
+    description: "Smashed avo, medley tomato, rocket, grated ricotta & dukka on thick sourdough",
     category: "main-menu",
-    isNew: true,
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-  },
-  
-  // Iced Drinks
-  {
-    id: 19,
-    name: "Iced Coffee",
-    price: "$5.50",
-    description: "Double shot of espresso over ice with milk and optional syrup",
-    category: "iced-drinks",
     isPopular: true,
-    image: "https://images.unsplash.com/photo-1499961024600-ad094db305cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742102673/mariana-medvedeva-fk6IiypMWss-unsplash_bp3bas.jpg"
   },
   {
-    id: 20,
-    name: "Iced Matcha",
-    price: "$6.00",
-    description: "Premium Japanese matcha whisked with cold milk over ice",
-    category: "iced-drinks",
-    image: "https://images.unsplash.com/photo-1567190538221-922ae677c3c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-  },
-  
-  // Pastries
-  {
-    id: 21,
-    name: "Almond Croissant",
-    price: "$5.50",
-    description: "Flaky croissant filled with almond frangipane",
-    category: "pastries",
+    id: 44,
+    name: "Teriyaki Rice Bowl",
+    price: "$18.00",
+    description: "Sushi rice served with edamame, house slaw, red onion, mayo & fried shallots either chicken/ smoked salomon/haloumi",
+    category: "main-menu",
     isPopular: true,
-    image: "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742102673/mariana-medvedeva-fk6IiypMWss-unsplash_bp3bas.jpg"
+  },
+
+
+  // Speciality
+  {
+    id: 45,
+    name: "Cherry Vanilla",
+    price: "$10.00",
+    description: "",
+    category: "speciality",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742103616/nha-van-uFAVbEbsOIM-unsplash_tsqipw.jpg"
   },
   {
-    id: 22,
-    name: "Banana Bread",
-    price: "$6.00",
-    description: "House-made with walnuts and honey, served with butter",
-    category: "pastries",
-    image: "https://images.unsplash.com/photo-1605286978633-2dec93ff88a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    id: 46,
+    name: "Raspberry Matcha",
+    price: "$10.00",
+    description: "",
+    category: "speciality",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742103616/nha-van-uFAVbEbsOIM-unsplash_tsqipw.jpg"
   },
   {
-    id: 23,
-    name: "Cinnamon Scroll",
-    price: "$5.00",
-    description: "Fresh baked swirl of cinnamon sugar, topped with cream cheese frosting",
-    category: "pastries",
-    isNew: true,
-    image: "https://images.unsplash.com/photo-1519676867240-f03562e64548?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    id: 47,
+    name: "Matcha",
+    price: "$10.00",
+    description: "",
+    category: "speciality",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742103616/nha-van-uFAVbEbsOIM-unsplash_tsqipw.jpg"
   },
+  {
+    id: 48,
+    name: "Raspberry Chocolate",
+    price: "$10.00",
+    description: "",
+    category: "speciality",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742103616/nha-van-uFAVbEbsOIM-unsplash_tsqipw.jpg"
+  },
+
+
+  // Cold Pressed Juices
+  {
+    id: 49,
+    name: "100% Orange",
+    price: "$7.00",
+    description: "",
+    category: "cold-pressed-juices",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104106/farhad-ibrahimzade-CiDpRQ9oPso-unsplash_umro4h.jpg"
+  },
+  {
+    id: 50,
+    name: "Green - Apple",
+    price: "$7.00",
+    description: "",
+    category: "cold-pressed-juices",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104106/farhad-ibrahimzade-CiDpRQ9oPso-unsplash_umro4h.jpg"
+  },
+  {
+    id: 51,
+    name: "Kale & Pear",
+    price: "$7.00",
+    description: "",
+    category: "cold-pressed-juices",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104106/farhad-ibrahimzade-CiDpRQ9oPso-unsplash_umro4h.jpg"
+  },
+  {
+    id: 52,
+    name: "Beets - Apple",
+    price: "$7.00",
+    description: "",
+    category: "cold-pressed-juices",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104106/farhad-ibrahimzade-CiDpRQ9oPso-unsplash_umro4h.jpg"
+  },
+  {
+    id: 53,
+    name: "Beetroot & Carrot",
+    price: "$7.00",
+    description: "",
+    category: "cold-pressed-juices",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104106/farhad-ibrahimzade-CiDpRQ9oPso-unsplash_umro4h.jpg"
+  },
+  {
+    id: 54,
+    name: "Ginger Orange",
+    price: "$7.00",
+    description: "",
+    category: "cold-pressed-juices",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104106/farhad-ibrahimzade-CiDpRQ9oPso-unsplash_umro4h.jpg"
+  },
+  {
+    id: 55,
+    name: "Ginger",
+    price: "$7.00",
+    description: "",
+    category: "cold-pressed-juices",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104106/farhad-ibrahimzade-CiDpRQ9oPso-unsplash_umro4h.jpg"
+  },
+  {
+    id: 56,
+    name: "Pineapple & Carrot",
+    price: "$7.00",
+    description: "",
+    category: "cold-pressed-juices",
+    isPopular: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104106/farhad-ibrahimzade-CiDpRQ9oPso-unsplash_umro4h.jpg"
+  },
+
+
+    // Iced Coffee
+    {
+      id: 57,
+      name: "Iced Long Black",
+      price: "$7.00",
+      description: "",
+      category: "iced-coffee",
+      isPopular: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104842/eiliv-aceron-_tSgUmeYMm8-unsplash_vlyn6n.jpg"
+    },
+    {
+      id: 58,
+      name: "Iced Latte",
+      price: "$7.00",
+      description: "",
+      category: "iced-coffee",
+      isPopular: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104842/eiliv-aceron-_tSgUmeYMm8-unsplash_vlyn6n.jpg"
+    },
+    {
+      id: 59,
+      name: "Iced Mocha",
+      price: "$8.00",
+      description: "",
+      category: "iced-coffee",
+      isPopular: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104842/eiliv-aceron-_tSgUmeYMm8-unsplash_vlyn6n.jpg"
+    },
+    {
+      id: 60,
+      name: "Iced Chocolate",
+      price: "$8.00",
+      description: "",
+      category: "iced-coffee",
+      isPopular: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104842/eiliv-aceron-_tSgUmeYMm8-unsplash_vlyn6n.jpg"
+    },
+    {
+      id: 61,
+      name: "Iced Chai Latte",
+      price: "$8.00",
+      description: "",
+      category: "iced-coffee",
+      isPopular: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104842/eiliv-aceron-_tSgUmeYMm8-unsplash_vlyn6n.jpg"
+    },
+
+
+        // Kombucha
+        {
+          id: 62,
+          name: "Ginger Lemon",
+          price: "$6.00",
+          description: "",
+          category: "kombucha",
+          isPopular: true,
+          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105168/katherine-sousa-ln2R1wJ8TCM-unsplash_oc6rj6.jpg"
+        },
+        {
+          id: 63,
+          name: "Raspberry Lemonade",
+          price: "$6.00",
+          description: "",
+          category: "kombucha",
+          isPopular: true,
+          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105168/katherine-sousa-ln2R1wJ8TCM-unsplash_oc6rj6.jpg"
+        },
+        {
+          id: 64,
+          name: "Passion Fruit",
+          price: "$6.00",
+          description: "",
+          category: "kombucha",
+          isPopular: true,
+          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105168/katherine-sousa-ln2R1wJ8TCM-unsplash_oc6rj6.jpg"
+        },
+
+
+        // Flavoured Sparkling
+        {
+          id: 65,
+          name: "San Pellegrino Aranciata",
+          price: "$7.00",
+          description: "",
+          category: "flavoured-sparkling",
+          isPopular: true,
+          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105430/jamie-street-qpN5MLx1uwk-unsplash_csnj6u.jpg"
+        },
+        {
+          id: 66,
+          name: "San Pellegrino Limonata",
+          price: "$7.00",
+          description: "",
+          category: "flavoured-sparkling",
+          isPopular: true,
+          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105430/jamie-street-qpN5MLx1uwk-unsplash_csnj6u.jpg"
+        },
 ];
 
 const Menu = () => {
