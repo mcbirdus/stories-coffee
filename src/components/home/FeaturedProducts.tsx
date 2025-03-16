@@ -18,37 +18,37 @@ interface Product {
 const featuredProducts: Product[] = [
   {
     id: 1,
-    name: "Stories Signature Blend",
+    name: "Macchiato",
     category: "Coffee",
-    price: "$4.50",
+    price: "$5.00",
     image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    rating: 4.9,
-    featured: true
-  },
-  {
-    id: 2,
-    name: "Classic Acai Bowl",
-    category: "Açaí",
-    price: "$12.95",
-    image: "https://images.unsplash.com/photo-1546039907-7fa05f864c02?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    rating: 4.8,
-    featured: true
-  },
-  {
-    id: 3,
-    name: "Avocado Smash Toast",
-    category: "Sandwiches",
-    price: "$14.95",
-    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     rating: 4.7,
     featured: true
   },
   {
+    id: 2,
+    name: "Açaí Coconut Flakes",
+    category: "Açaí",
+    price: "$15.95",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741916520/mitch-fox-5pk7ZB1xyjU-unsplash_l67ua1.jpg",
+    rating: 4.9,
+    featured: true
+  },
+  {
+    id: 3,
+    name: "Ham, Cheese & Avocado Toast",
+    category: "Sandwiches",
+    price: "$14.00",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914161/monteverdo-barnsley-BXNctQYqPOc-unsplash_ae6rfh.jpg",
+    rating: 4.8,
+    featured: true
+  },
+  {
     id: 4,
-    name: "Matcha Latte",
+    name: "Lemongrass Ginger",
     category: "Teas",
-    price: "$5.50",
-    image: "https://images.unsplash.com/photo-1536013455962-2668f3c75efc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    price: "$5.00",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914081/pariwat-pannium-EgDkl00Hiqw-unsplash_qlnjjs.jpg",
     rating: 4.6,
     featured: true
   }
