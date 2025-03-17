@@ -99,12 +99,6 @@ const categories: Category[] = [
     icon: GlassWater,
     slug: "catering",
   },
-  {
-    id: 13,
-    name: "Add-Ons",
-    icon: CakeSlice,
-    slug: "add-ons",
-  },
 ];
 
 const menuItems: MenuItem[] = [
