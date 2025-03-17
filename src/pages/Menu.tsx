@@ -211,9 +211,9 @@ const menuItems: MenuItem[] = [
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
   },
   
-    // Coffee Add-Ons
+    // Açaí Add-Ons
     {
-      id: 101,
+      id: 107,
       name: "Extra Shot",
       price: "$0.50",
       description: "Add an extra shot of espresso",
@@ -222,7 +222,7 @@ const menuItems: MenuItem[] = [
       image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
     },
     {
-      id: 102,
+      id: 108,
       name: "Almond Milk",
       price: "$0.80",
       description: "Replace with almond milk",
@@ -231,7 +231,7 @@ const menuItems: MenuItem[] = [
       image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
     },
     {
-      id: 103,
+      id: 109,
       name: "Oat Milk",
       price: "$0.80",
       description: "Replace with oat milk",
@@ -240,7 +240,7 @@ const menuItems: MenuItem[] = [
       image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
     },
     {
-      id: 104,
+      id: 110,
       name: "Soy Milk",
       price: "$0.80",
       description: "Replace with soy milk",
@@ -249,7 +249,7 @@ const menuItems: MenuItem[] = [
       image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
     },
     {
-      id: 105,
+      id: 111,
       name: "Vanilla Syrup",
       price: "$0.50",
       description: "Add vanilla flavor",
@@ -258,7 +258,7 @@ const menuItems: MenuItem[] = [
       image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
     },
     {
-      id: 106,
+      id: 112,
       name: "Caramel Syrup",
       price: "$0.50",
       description: "Add caramel flavor",
@@ -442,6 +442,63 @@ const menuItems: MenuItem[] = [
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100801/mae-mu-kbch-i63YTg-unsplash_nspd5d.jpg"
   },
   
+            // Teas Add-Ons
+            {
+              id: 131,
+              name: "Extra Shot",
+              price: "$0.50",
+              description: "Add an extra shot of espresso",
+              category: "teas",
+              isAddOn: true,
+              image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+            },
+            {
+              id: 132,
+              name: "Almond Milk",
+              price: "$0.80",
+              description: "Replace with almond milk",
+              category: "teas",
+              isAddOn: true,
+              image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+            },
+            {
+              id: 133,
+              name: "Oat Milk",
+              price: "$0.80",
+              description: "Replace with oat milk",
+              category: "teas",
+              isAddOn: true,
+              image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+            },
+            {
+              id: 134,
+              name: "Soy Milk",
+              price: "$0.80",
+              description: "Replace with soy milk",
+              category: "teas",
+              isAddOn: true,
+              image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+            },
+            {
+              id: 135,
+              name: "Vanilla Syrup",
+              price: "$0.50",
+              description: "Add vanilla flavor",
+              category: "teas",
+              isAddOn: true,
+              image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+            },
+            {
+              id: 136,
+              name: "Caramel Syrup",
+              price: "$0.50",
+              description: "Add caramel flavor",
+              category: "teas",
+              isAddOn: true,
+              image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+            },
+
+
   // Smoothies
   {
     id: 26,
@@ -475,6 +532,62 @@ const menuItems: MenuItem[] = [
     category: "smoothies",
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101031/joanna-kosinska-m741tj4Cz7M-unsplash_klrjab.jpg"
   },
+
+          // Smoothies Add-Ons
+          {
+            id: 125,
+            name: "Extra Shot",
+            price: "$0.50",
+            description: "Add an extra shot of espresso",
+            category: "smoothies",
+            isAddOn: true,
+            image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+          },
+          {
+            id: 126,
+            name: "Almond Milk",
+            price: "$0.80",
+            description: "Replace with almond milk",
+            category: "smoothies",
+            isAddOn: true,
+            image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+          },
+          {
+            id: 127,
+            name: "Oat Milk",
+            price: "$0.80",
+            description: "Replace with oat milk",
+            category: "smoothies",
+            isAddOn: true,
+            image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+          },
+          {
+            id: 128,
+            name: "Soy Milk",
+            price: "$0.80",
+            description: "Replace with soy milk",
+            category: "smoothies",
+            isAddOn: true,
+            image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+          },
+          {
+            id: 129,
+            name: "Vanilla Syrup",
+            price: "$0.50",
+            description: "Add vanilla flavor",
+            category: "smoothies",
+            isAddOn: true,
+            image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+          },
+          {
+            id: 130,
+            name: "Caramel Syrup",
+            price: "$0.50",
+            description: "Add caramel flavor",
+            category: "smoothies",
+            isAddOn: true,
+            image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+          },
   
   // Sandwiches
   {
@@ -559,7 +672,63 @@ const menuItems: MenuItem[] = [
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742101621/eiliv-aceron-mAQZ3X_8_l0-unsplash_yjegkc.jpg"
   },
 
-  
+      // Sandwiches Add-Ons
+      {
+        id: 113,
+        name: "Extra Shot",
+        price: "$0.50",
+        description: "Add an extra shot of espresso",
+        category: "sandwiches",
+        isAddOn: true,
+        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+      },
+      {
+        id: 114,
+        name: "Almond Milk",
+        price: "$0.80",
+        description: "Replace with almond milk",
+        category: "sandwiches",
+        isAddOn: true,
+        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+      },
+      {
+        id: 115,
+        name: "Oat Milk",
+        price: "$0.80",
+        description: "Replace with oat milk",
+        category: "sandwiches",
+        isAddOn: true,
+        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+      },
+      {
+        id: 116,
+        name: "Soy Milk",
+        price: "$0.80",
+        description: "Replace with soy milk",
+        category: "sandwiches",
+        isAddOn: true,
+        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+      },
+      {
+        id: 117,
+        name: "Vanilla Syrup",
+        price: "$0.50",
+        description: "Add vanilla flavor",
+        category: "sandwiches",
+        isAddOn: true,
+        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+      },
+      {
+        id: 118,
+        name: "Caramel Syrup",
+        price: "$0.50",
+        description: "Add caramel flavor",
+        category: "sandwiches",
+        isAddOn: true,
+        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+      },
+
+
   // Main Menu Items
   {
     id: 39,
@@ -616,6 +785,61 @@ const menuItems: MenuItem[] = [
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742102673/mariana-medvedeva-fk6IiypMWss-unsplash_bp3bas.jpg"
   },
 
+        // Main Menu Add-Ons
+        {
+          id: 119,
+          name: "Extra Shot",
+          price: "$0.50",
+          description: "Add an extra shot of espresso",
+          category: "main-menu",
+          isAddOn: true,
+          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+        },
+        {
+          id: 120,
+          name: "Almond Milk",
+          price: "$0.80",
+          description: "Replace with almond milk",
+          category: "main-menu",
+          isAddOn: true,
+          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+        },
+        {
+          id: 121,
+          name: "Oat Milk",
+          price: "$0.80",
+          description: "Replace with oat milk",
+          category: "main-menu",
+          isAddOn: true,
+          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+        },
+        {
+          id: 122,
+          name: "Soy Milk",
+          price: "$0.80",
+          description: "Replace with soy milk",
+          category: "main-menu",
+          isAddOn: true,
+          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+        },
+        {
+          id: 123,
+          name: "Vanilla Syrup",
+          price: "$0.50",
+          description: "Add vanilla flavor",
+          category: "main-menu",
+          isAddOn: true,
+          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+        },
+        {
+          id: 124,
+          name: "Caramel Syrup",
+          price: "$0.50",
+          description: "Add caramel flavor",
+          category: "main-menu",
+          isAddOn: true,
+          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+        },
 
   // Speciality
   {
@@ -654,6 +878,62 @@ const menuItems: MenuItem[] = [
     isPopular: true,
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742103616/nha-van-uFAVbEbsOIM-unsplash_tsqipw.jpg"
   },
+
+                 // Speciality Add-Ons
+                 {
+                  id: 143,
+                  name: "Extra Shot",
+                  price: "$0.50",
+                  description: "Add an extra shot of espresso",
+                  category: "speciality",
+                  isAddOn: true,
+                  image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                },
+                {
+                  id: 144,
+                  name: "Almond Milk",
+                  price: "$0.80",
+                  description: "Replace with almond milk",
+                  category: "speciality",
+                  isAddOn: true,
+                  image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                },
+                {
+                  id: 145,
+                  name: "Oat Milk",
+                  price: "$0.80",
+                  description: "Replace with oat milk",
+                  category: "speciality",
+                  isAddOn: true,
+                  image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                },
+                {
+                  id: 146,
+                  name: "Soy Milk",
+                  price: "$0.80",
+                  description: "Replace with soy milk",
+                  category: "speciality",
+                  isAddOn: true,
+                  image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                },
+                {
+                  id: 147,
+                  name: "Vanilla Syrup",
+                  price: "$0.50",
+                  description: "Add vanilla flavor",
+                  category: "speciality",
+                  isAddOn: true,
+                  image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                },
+                {
+                  id: 148,
+                  name: "Caramel Syrup",
+                  price: "$0.50",
+                  description: "Add caramel flavor",
+                  category: "speciality",
+                  isAddOn: true,
+                  image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                },
 
 
   // Cold Pressed Juices
@@ -731,6 +1011,63 @@ const menuItems: MenuItem[] = [
   },
 
 
+                   // Cold Pressed Juices Add-Ons
+                   {
+                    id: 149,
+                    name: "Extra Shot",
+                    price: "$0.50",
+                    description: "Add an extra shot of espresso",
+                    category: "cold-pressed-juices",
+                    isAddOn: true,
+                    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                  },
+                  {
+                    id: 150,
+                    name: "Almond Milk",
+                    price: "$0.80",
+                    description: "Replace with almond milk",
+                    category: "cold-pressed-juices",
+                    isAddOn: true,
+                    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                  },
+                  {
+                    id: 151,
+                    name: "Oat Milk",
+                    price: "$0.80",
+                    description: "Replace with oat milk",
+                    category: "cold-pressed-juices",
+                    isAddOn: true,
+                    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                  },
+                  {
+                    id: 152,
+                    name: "Soy Milk",
+                    price: "$0.80",
+                    description: "Replace with soy milk",
+                    category: "cold-pressed-juices",
+                    isAddOn: true,
+                    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                  },
+                  {
+                    id: 153,
+                    name: "Vanilla Syrup",
+                    price: "$0.50",
+                    description: "Add vanilla flavor",
+                    category: "cold-pressed-juices",
+                    isAddOn: true,
+                    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                  },
+                  {
+                    id: 154,
+                    name: "Caramel Syrup",
+                    price: "$0.50",
+                    description: "Add caramel flavor",
+                    category: "cold-pressed-juices",
+                    isAddOn: true,
+                    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                  },
+
+
     // Iced Coffee
     {
       id: 57,
@@ -778,6 +1115,62 @@ const menuItems: MenuItem[] = [
       image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742104842/eiliv-aceron-_tSgUmeYMm8-unsplash_vlyn6n.jpg"
     },
 
+               // Iced Coffee Add-Ons
+               {
+                id: 137,
+                name: "Extra Shot",
+                price: "$0.50",
+                description: "Add an extra shot of espresso",
+                category: "iced-coffee",
+                isAddOn: true,
+                image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+              },
+              {
+                id: 138,
+                name: "Almond Milk",
+                price: "$0.80",
+                description: "Replace with almond milk",
+                category: "iced-coffee",
+                isAddOn: true,
+                image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+              },
+              {
+                id: 139,
+                name: "Oat Milk",
+                price: "$0.80",
+                description: "Replace with oat milk",
+                category: "iced-coffee",
+                isAddOn: true,
+                image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+              },
+              {
+                id: 140,
+                name: "Soy Milk",
+                price: "$0.80",
+                description: "Replace with soy milk",
+                category: "iced-coffee",
+                isAddOn: true,
+                image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+              },
+              {
+                id: 141,
+                name: "Vanilla Syrup",
+                price: "$0.50",
+                description: "Add vanilla flavor",
+                category: "iced-coffee",
+                isAddOn: true,
+                image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+              },
+              {
+                id: 142,
+                name: "Caramel Syrup",
+                price: "$0.50",
+                description: "Add caramel flavor",
+                category: "iced-coffee",
+                isAddOn: true,
+                image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+              },
+  
 
     // Kombucha
     {
@@ -808,6 +1201,62 @@ const menuItems: MenuItem[] = [
       image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105168/katherine-sousa-ln2R1wJ8TCM-unsplash_oc6rj6.jpg"
     },
 
+
+                       // Kombucha Add-Ons
+                       {
+                        id: 155,
+                        name: "Extra Shot",
+                        price: "$0.50",
+                        description: "Add an extra shot of espresso",
+                        category: "kombucha",
+                        isAddOn: true,
+                        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                      },
+                      {
+                        id: 156,
+                        name: "Almond Milk",
+                        price: "$0.80",
+                        description: "Replace with almond milk",
+                        category: "kombucha",
+                        isAddOn: true,
+                        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                      },
+                      {
+                        id: 157,
+                        name: "Oat Milk",
+                        price: "$0.80",
+                        description: "Replace with oat milk",
+                        category: "kombucha",
+                        isAddOn: true,
+                        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                      },
+                      {
+                        id: 158,
+                        name: "Soy Milk",
+                        price: "$0.80",
+                        description: "Replace with soy milk",
+                        category: "kombucha",
+                        isAddOn: true,
+                        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                      },
+                      {
+                        id: 159,
+                        name: "Vanilla Syrup",
+                        price: "$0.50",
+                        description: "Add vanilla flavor",
+                        category: "kombucha",
+                        isAddOn: true,
+                        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                      },
+                      {
+                        id: 160,
+                        name: "Caramel Syrup",
+                        price: "$0.50",
+                        description: "Add caramel flavor",
+                        category: "kombucha",
+                        isAddOn: true,
+                        image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+                      },
 
     // Flavoured Sparkling
     {
@@ -1002,7 +1451,294 @@ const Menu = () => {
                   </div>
                 </div>
               )}
+              {selectedCategory === "speciality" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {selectedCategory === "cold-pressed-juices" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {selectedCategory === "kombucha" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {selectedCategory === "flavoured-sparkling" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {selectedCategory === "catering" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+               {selectedCategory === "smoothies" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+               {selectedCategory === "teas" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+               {selectedCategory === "iced-coffee" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+               {selectedCategory === "main-menu" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {selectedCategory === "acai" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+               {selectedCategory === "sandwiches" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
+            
           )}
 
           {!selectedCategory && (
@@ -1013,6 +1749,7 @@ const Menu = () => {
               </p>
             </div>
           )}
+          
         </div>
         
         <CateringFormSection />
