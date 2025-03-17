@@ -211,6 +211,62 @@ const menuItems: MenuItem[] = [
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1741914224/eiliv-aceron-uzdfBCKwKTk-unsplash_rroswm.jpg"
   },
   
+    // Coffee Add-Ons
+    {
+      id: 101,
+      name: "Extra Shot",
+      price: "$0.50",
+      description: "Add an extra shot of espresso",
+      category: "acai",
+      isAddOn: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+    },
+    {
+      id: 102,
+      name: "Almond Milk",
+      price: "$0.80",
+      description: "Replace with almond milk",
+      category: "acai",
+      isAddOn: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+    },
+    {
+      id: 103,
+      name: "Oat Milk",
+      price: "$0.80",
+      description: "Replace with oat milk",
+      category: "acai",
+      isAddOn: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+    },
+    {
+      id: 104,
+      name: "Soy Milk",
+      price: "$0.80",
+      description: "Replace with soy milk",
+      category: "acai",
+      isAddOn: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+    },
+    {
+      id: 105,
+      name: "Vanilla Syrup",
+      price: "$0.50",
+      description: "Add vanilla flavor",
+      category: "acai",
+      isAddOn: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+    },
+    {
+      id: 106,
+      name: "Caramel Syrup",
+      price: "$0.50",
+      description: "Add caramel flavor",
+      category: "acai",
+      isAddOn: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+    },
+
   // Coffee Items
   {
     id: 13,
