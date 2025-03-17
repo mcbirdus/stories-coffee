@@ -772,23 +772,23 @@ const Menu = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 opacity-0 animate-fade-in delay-200">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4 mb-16 opacity-0 animate-fade-in delay-200">
             {categories.map((category, index) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.slug)}
                 className={cn(
-                  "bg-stories-light-gray dark:bg-stories-dark/60 rounded-xl p-6 text-center hover-lift hover:bg-white dark:hover:bg-stories-dark/80 border-2 transition-all duration-300",
+                  "bg-stories-light-gray dark:bg-stories-dark/60 rounded-xl p-4 text-center hover-lift hover:bg-white dark:hover:bg-stories-dark/80 border-2 transition-all duration-300",
                   selectedCategory === category.slug 
                     ? "border-stories-green" 
                     : "border-transparent hover:border-stories-green/20 dark:hover:border-stories-green/20",
                   isVisible && `delay-${Math.min(index * 100, 500)}`
                 )}
               >
-                <div className="bg-stories-green/10 dark:bg-stories-green/20 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <category.icon className="h-8 w-8 text-stories-green" />
+                <div className="bg-stories-green/10 dark:bg-stories-green/20 h-12 w-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <category.icon className="h-6 w-6 text-stories-green" />
                 </div>
-                <h3 className="text-xl font-bold mb-2 font-playfair">{category.name}</h3>
+                <h3 className="text-sm font-bold mb-1 font-playfair">{category.name}</h3>
               </button>
             ))}
           </div>

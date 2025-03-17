@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Coffee, Cake, Utensils, Wine, ShoppingBag, Gift, Compass, Map, Heart, Star } from 'lucide-react';
+import { Coffee, Cherry, Leaf, GlassWater, Sandwich, BookOpen, CakeSlice } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
@@ -16,87 +16,87 @@ type Category = {
 const categories: Category[] = [
   {
     id: 1,
-    name: 'Coffee',
-    icon: Coffee,
-    description: 'Our premium coffee selection',
-    slug: 'coffee',
+    name: "Açaí",
+    icon: Cherry,
+    description: "Fresh bowls with super fruits",
+    slug: "acai",
   },
   {
     id: 2,
-    name: 'Pastries',
-    icon: Cake,
-    description: 'Freshly baked pastries daily',
-    slug: 'pastries',
+    name: "Main Menu",
+    icon: BookOpen,
+    description: "Our popular breakfast options",
+    slug: "main-menu",
   },
   {
     id: 3,
-    name: 'Breakfast',
-    icon: Utensils,
-    description: 'Start your day right',
-    slug: 'breakfast',
+    name: "Sandwiches",
+    icon: Sandwich,
+    description: "Fresh and tasty sandwiches",
+    slug: "sandwiches",
   },
   {
     id: 4,
-    name: 'Lunch',
-    icon: Utensils,
-    description: 'Delicious lunch options',
-    slug: 'lunch',
+    name: "Coffee",
+    icon: Coffee,
+    description: "Premium coffee selection",
+    slug: "coffee",
   },
   {
     id: 5,
-    name: 'Beverages',
-    icon: Wine,
-    description: 'Refreshing drink selection',
-    slug: 'beverages',
+    name: "Iced Coffee",
+    icon: Coffee,
+    description: "Refreshing iced coffee drinks",
+    slug: "iced-coffee",
   },
   {
     id: 6,
-    name: 'Retail',
-    icon: ShoppingBag,
-    description: 'Coffee beans and merchandise',
-    slug: 'retail',
+    name: "Teas",
+    icon: Leaf,
+    description: "Quality loose leaf teas",
+    slug: "teas",
   },
   {
     id: 7,
-    name: 'Gifts',
-    icon: Gift,
-    description: 'Perfect presents for coffee lovers',
-    slug: 'gifts',
+    name: "Smoothies",
+    icon: GlassWater,
+    description: "Healthy fruit smoothies",
+    slug: "smoothies",
   },
   {
     id: 8,
-    name: 'Locations',
-    icon: Map,
-    description: 'Find us across the city',
-    slug: 'locations',
+    name: "Speciality",
+    icon: GlassWater,
+    description: "Unique signature drinks",
+    slug: "speciality",
   },
   {
     id: 9,
-    name: 'Our Story',
-    icon: Heart,
-    description: 'Learn about our journey',
-    slug: 'our-story',
+    name: "Cold Pressed Juices",
+    icon: GlassWater,
+    description: "Fresh pressed juice selection",
+    slug: "cold-pressed-juices",
   },
   {
     id: 10,
-    name: 'Events',
-    icon: Star,
-    description: 'Join our special events',
-    slug: 'events',
+    name: "Kombucha",
+    icon: GlassWater,
+    description: "Fermented probiotic tea",
+    slug: "kombucha",
   },
   {
     id: 11,
-    name: 'Catering',
-    icon: Utensils,
-    description: 'For your special occasions',
-    slug: 'catering',
+    name: "Flavoured Sparkling",
+    icon: GlassWater,
+    description: "Refreshing sparkling beverages",
+    slug: "flavoured-sparkling",
   },
   {
     id: 12,
-    name: 'Explore',
-    icon: Compass,
-    description: 'Discover more about us',
-    slug: 'explore',
+    name: "Catering",
+    icon: Sandwich,
+    description: "For your events and meetings",
+    slug: "catering",
   },
 ];
 
@@ -142,15 +142,15 @@ const CategoriesSection = () => {
               key={category.id}
               to={`/menu#${category.slug}`}
               className={cn(
-                "bg-stories-light-gray dark:bg-stories-dark/60 rounded-xl p-4 text-center hover-lift hover:bg-white dark:hover:bg-stories-dark/80 border border-transparent hover:border-stories-green/20 dark:hover:border-stories-green/20 transition-all duration-500",
+                "bg-stories-light-gray dark:bg-stories-dark/60 rounded-xl p-3 text-center hover-lift hover:bg-white dark:hover:bg-stories-dark/80 border border-transparent hover:border-stories-green/20 dark:hover:border-stories-green/20 transition-all duration-500",
                 isVisible && "opacity-0 animate-fade-up",
                 isVisible && `delay-${Math.min(index * 100, 500)}`
               )}
             >
-              <div className="bg-stories-green/10 dark:bg-stories-green/20 h-12 w-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                <category.icon className="h-6 w-6 text-stories-green" />
+              <div className="bg-stories-green/10 dark:bg-stories-green/20 h-10 w-10 rounded-full flex items-center justify-center mx-auto mb-2">
+                <category.icon className="h-5 w-5 text-stories-green" />
               </div>
-              <h3 className="text-lg font-bold mb-1 font-playfair">{category.name}</h3>
+              <h3 className="text-sm font-bold mb-1 font-playfair">{category.name}</h3>
               <p className="text-xs text-stories-dark/70 dark:text-white/70">{category.description}</p>
             </Link>
           ))}
