@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { Coffee, Cherry, Leaf, GlassWater, Sandwich, BookOpen, CakeSlice } from "lucide-react";
+import { Coffee, Cherry, Leaf, GlassWater, Sandwich, BookOpen, CakeSlice, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import CateringFormSection from "@/components/menu/CateringFormSection";
@@ -93,10 +93,16 @@ const categories: Category[] = [
     slug: "flavoured-sparkling",
   },
   {
-    id: 11,
+    id: 12,
     name: "Catering",
-    icon: GlassWater,
+    icon: Sandwich,
     slug: "catering",
+  },
+  {
+    id: 13,
+    name: "Add-Ons",
+    icon: Plus,
+    slug: "add-ons",
   },
 ];
 
@@ -719,6 +725,32 @@ const menuItems: MenuItem[] = [
           isPopular: true,
           image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105430/jamie-street-qpN5MLx1uwk-unsplash_csnj6u.jpg"
         },
+  
+  // Add-Ons Items
+  {
+    id: 68,
+    name: "Extra Shot",
+    price: "$1.00",
+    description: "Add an extra shot of espresso to any coffee",
+    category: "add-ons",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },
+  {
+    id: 69,
+    name: "Alternative Milk",
+    price: "$0.80",
+    description: "Almond, Oat, Soy or Lactose Free",
+    category: "add-ons",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },
+  {
+    id: 70,
+    name: "Syrup",
+    price: "$0.80",
+    description: "Vanilla, Caramel or Hazelnut",
+    category: "add-ons",
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },
 ];
 
 const Menu = () => {
