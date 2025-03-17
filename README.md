@@ -1,4 +1,4 @@
-Welcome to Stories Coffee
+# Welcome to Stories Coffee
 
 ## Project info
 
