@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Coffee, Cake, Utensils, Wine, ShoppingBag, Gift, Compass, Map, Heart, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 // Define the Category type with description property
