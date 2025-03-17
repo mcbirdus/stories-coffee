@@ -1,89 +1,101 @@
 
-import { useState, useEffect, useRef } from "react";
-import { Coffee, Leaf, Salad, Cherry, Sandwich, BookOpen, GlassWater, CakeSlice } from "lucide-react";
-import { Link } from "react-router-dom";
-import { cn } from "@/lib/utils";
+import React from 'react';
+import { Coffee, Cake, Utensils, Wine, ShoppingBag, Gift, Compass, Map, Heart, Star } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-interface Category {
+// Define the Category type with description property
+type Category = {
   id: number;
   name: string;
-  icon: React.ElementType;
+  icon: React.ForwardRefExoticComponent<any>;
+  description: string; // Added description property
   slug: string;
-  description: string;
-}
+};
 
 const categories: Category[] = [
   {
     id: 1,
-    name: "Açaí",
-    icon: Cherry,
-    slug: "acai",
+    name: 'Coffee',
+    icon: Coffee,
+    description: 'Our premium coffee selection',
+    slug: 'coffee',
   },
   {
     id: 2,
-    name: "Main Menu",
-    icon: BookOpen,
-    slug: "main-menu",
+    name: 'Pastries',
+    icon: Cake,
+    description: 'Freshly baked pastries daily',
+    slug: 'pastries',
   },
   {
     id: 3,
-    name: "Sandwiches",
-    icon: Sandwich,
-    slug: "sandwiches",
+    name: 'Breakfast',
+    icon: Utensils,
+    description: 'Start your day right',
+    slug: 'breakfast',
   },
   {
     id: 4,
-    name: "Coffee",
-    icon: Coffee,
-    slug: "coffee",
+    name: 'Lunch',
+    icon: Utensils,
+    description: 'Delicious lunch options',
+    slug: 'lunch',
   },
   {
     id: 5,
-    name: "Iced Coffee",
-    icon: GlassWater,
-    slug: "iced-coffee",
+    name: 'Beverages',
+    icon: Wine,
+    description: 'Refreshing drink selection',
+    slug: 'beverages',
   },
   {
     id: 6,
-    name: "Teas",
-    icon: Leaf,
-    slug: "teas",
+    name: 'Retail',
+    icon: ShoppingBag,
+    description: 'Coffee beans and merchandise',
+    slug: 'retail',
   },
   {
     id: 7,
-    name: "Smoothies",
-    icon: GlassWater,
-    slug: "smoothies",
+    name: 'Gifts',
+    icon: Gift,
+    description: 'Perfect presents for coffee lovers',
+    slug: 'gifts',
   },
   {
     id: 8,
-    name: "Speciality",
-    icon: GlassWater,
-    slug: "speciality",
+    name: 'Locations',
+    icon: Map,
+    description: 'Find us across the city',
+    slug: 'locations',
   },
   {
     id: 9,
-    name: "Cold Pressed Juices",
-    icon: GlassWater,
-    slug: "cold-pressed-juices",
+    name: 'Our Story',
+    icon: Heart,
+    description: 'Learn about our journey',
+    slug: 'our-story',
   },
   {
     id: 10,
-    name: "Kombucha",
-    icon: GlassWater,
-    slug: "kombucha",
+    name: 'Events',
+    icon: Star,
+    description: 'Join our special events',
+    slug: 'events',
   },
   {
     id: 11,
-    name: "Flavoured Sparkling",
-    icon: GlassWater,
-    slug: "flavoured-sparkling",
+    name: 'Catering',
+    icon: Utensils,
+    description: 'For your special occasions',
+    slug: 'catering',
   },
   {
-    id: 11,
-    name: "Catering",
-    icon: Sandwich,
-    slug: "catering",
+    id: 12,
+    name: 'Explore',
+    icon: Compass,
+    description: 'Discover more about us',
+    slug: 'explore',
   },
 ];
 
