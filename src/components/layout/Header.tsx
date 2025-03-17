@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Sparkles, Gift } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { cn } from "@/lib/utils";
@@ -46,22 +46,12 @@ const Header = () => {
           : "bg-transparent py-4"
       )}
     >
-      {/* Enhanced App coming soon banner */}
-      <div className="bg-gradient-to-r from-stories-green to-stories-green/80 text-white py-3 px-4 text-center relative overflow-hidden">
+      {/* Enhanced App coming soon banner with rounded corners */}
+      <div className="bg-gradient-to-r from-stories-green to-stories-green/80 text-white py-3 px-4 text-center relative overflow-hidden rounded-md">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjxwYXRoIGQ9Ik0xNiA0YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDQtMS44IDQtNCA0LTQtMS44LTQtNHoiLz48cGF0aCBkPSJNMzYgMTRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
         
-        <div className="animate-bounce absolute left-10 top-1/2 -translate-y-1/2 hidden md:block">
-          <Sparkles className="h-6 w-6 text-white-200" />
-        </div>
-        
-        <div className="animate-bounce absolute right-10 top-1/2 -translate-y-1/2 hidden md:block">
-          <Gift className="h-6 w-6 text-white-200" />
-        </div>
-        
         <p className="font-medium relative z-10 flex items-center justify-center gap-2">
-        <Sparkles className="h-5 w-5 text-white-200 inline md:hidden" />
           <span className="text-sm md:text-base animate-pulse">Our app is coming soon, so stay tuned for an enhanced coffee experience!</span>
-          <Gift className="h-5 w-5 text-white-200 inline md:hidden" />
         </p>
       </div>
 
