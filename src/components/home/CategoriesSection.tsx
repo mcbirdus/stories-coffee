@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Coffee, Cherry, Leaf, GlassWater, Sandwich, BookOpen, CakeSlice, Plus } from 'lucide-react';
+import { Coffee, Cherry, Leaf, GlassWater, Sandwich, BookOpen, CakeSlice } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
@@ -9,7 +9,7 @@ type Category = {
   id: number;
   name: string;
   icon: React.ForwardRefExoticComponent<any>;
-  description: string;
+  description: string; // Added description property
   slug: string;
 };
 
@@ -98,13 +98,6 @@ const categories: Category[] = [
     description: "For your events and meetings",
     slug: "catering",
   },
-  {
-    id: 13,
-    name: "Add-Ons",
-    icon: Plus,
-    description: "Customize your order with extras",
-    slug: "add-ons",
-  },
 ];
 
 const CategoriesSection = () => {
@@ -143,22 +136,22 @@ const CategoriesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {categories.map((category, index) => (
             <Link
               key={category.id}
               to={`/menu#${category.slug}`}
               className={cn(
-                "bg-stories-light-gray dark:bg-stories-dark/60 rounded-xl p-2.5 text-center hover-lift hover:bg-white dark:hover:bg-stories-dark/80 border border-transparent hover:border-stories-green/20 dark:hover:border-stories-green/20 transition-all duration-500",
+                "bg-stories-light-gray dark:bg-stories-dark/60 rounded-xl p-3 text-center hover-lift hover:bg-white dark:hover:bg-stories-dark/80 border border-transparent hover:border-stories-green/20 dark:hover:border-stories-green/20 transition-all duration-500",
                 isVisible && "opacity-0 animate-fade-up",
                 isVisible && `delay-${Math.min(index * 100, 500)}`
               )}
             >
-              <div className="bg-stories-green/10 dark:bg-stories-green/20 h-9 w-9 rounded-full flex items-center justify-center mx-auto mb-2">
-                <category.icon className="h-4 w-4 text-stories-green" />
+              <div className="bg-stories-green/10 dark:bg-stories-green/20 h-10 w-10 rounded-full flex items-center justify-center mx-auto mb-2">
+                <category.icon className="h-5 w-5 text-stories-green" />
               </div>
-              <h3 className="text-xs font-bold mb-1 font-playfair">{category.name}</h3>
-              <p className="text-[10px] text-stories-dark/70 dark:text-white/70">{category.description}</p>
+              <h3 className="text-sm font-bold mb-1 font-playfair">{category.name}</h3>
+              <p className="text-xs text-stories-dark/70 dark:text-white/70">{category.description}</p>
             </Link>
           ))}
         </div>

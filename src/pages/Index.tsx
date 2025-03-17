@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <>
       <Header />
-      <main className="pt-20"> {/* Increased padding top for more space after header */}
+      <main className="pt-16"> {/* Add padding top to account for fixed header */}
         <HeroSection />
         <CategoriesSection />
         <FeaturedProducts />
