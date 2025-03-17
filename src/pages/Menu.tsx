@@ -260,7 +260,8 @@ const menuItems: MenuItem[] = [
     category: "coffee",
     isNew: true,
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
-  },  {
+  },  
+  {
     id: 18,
     name: "Latte",
     price: "S $4.50 | M $5.00 | L $5.50",
@@ -268,7 +269,8 @@ const menuItems: MenuItem[] = [
     category: "coffee",
     isNew: true,
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
-  },  {
+  },  
+  {
     id: 19,
     name: "Mocha",
     price: "S $4.50 | M $5.00 | L $5.50",
@@ -276,7 +278,8 @@ const menuItems: MenuItem[] = [
     category: "coffee",
     isNew: true,
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
-  },  {
+  },  
+  {
     id: 20,
     name: "Chai Latte",
     price: "S $4.50 | M $5.00 | L $5.50",
@@ -284,7 +287,8 @@ const menuItems: MenuItem[] = [
     category: "coffee",
     isNew: true,
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
-  },  {
+  },  
+  {
     id: 21,
     name: "Hot Chocolate",
     price: "S $4.50 | M $5.00 | L $5.50",
@@ -292,13 +296,61 @@ const menuItems: MenuItem[] = [
     category: "coffee",
     isNew: true,
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
-  },  {
-    id: 67,
-    name: "Add-ons",
-    price: "S $4.50 | M $5.00 | L $5.50",
-    description: "",
+  },
+
+  // Coffee Add-Ons
+  {
+    id: 101,
+    name: "Extra Shot",
+    price: "$0.50",
+    description: "Add an extra shot of espresso",
     category: "coffee",
-    isNew: true,
+    isAddOn: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },
+  {
+    id: 102,
+    name: "Almond Milk",
+    price: "$0.80",
+    description: "Replace with almond milk",
+    category: "coffee",
+    isAddOn: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },
+  {
+    id: 103,
+    name: "Oat Milk",
+    price: "$0.80",
+    description: "Replace with oat milk",
+    category: "coffee",
+    isAddOn: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },
+  {
+    id: 104,
+    name: "Soy Milk",
+    price: "$0.80",
+    description: "Replace with soy milk",
+    category: "coffee",
+    isAddOn: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },
+  {
+    id: 105,
+    name: "Vanilla Syrup",
+    price: "$0.50",
+    description: "Add vanilla flavor",
+    category: "coffee",
+    isAddOn: true,
+    image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
+  },
+  {
+    id: 106,
+    name: "Caramel Syrup",
+    price: "$0.50",
+    description: "Add caramel flavor",
+    category: "coffee",
+    isAddOn: true,
     image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742100000/nathan-dumlao-nBJHO6wmRWw-unsplash_t4aewl.jpg"
   },
   
@@ -677,55 +729,55 @@ const menuItems: MenuItem[] = [
     },
 
 
-        // Kombucha
-        {
-          id: 62,
-          name: "Ginger Lemon",
-          price: "$6.00",
-          description: "",
-          category: "kombucha",
-          isPopular: true,
-          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105168/katherine-sousa-ln2R1wJ8TCM-unsplash_oc6rj6.jpg"
-        },
-        {
-          id: 63,
-          name: "Raspberry Lemonade",
-          price: "$6.00",
-          description: "",
-          category: "kombucha",
-          isPopular: true,
-          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105168/katherine-sousa-ln2R1wJ8TCM-unsplash_oc6rj6.jpg"
-        },
-        {
-          id: 64,
-          name: "Passion Fruit",
-          price: "$6.00",
-          description: "",
-          category: "kombucha",
-          isPopular: true,
-          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105168/katherine-sousa-ln2R1wJ8TCM-unsplash_oc6rj6.jpg"
-        },
+    // Kombucha
+    {
+      id: 62,
+      name: "Ginger Lemon",
+      price: "$6.00",
+      description: "",
+      category: "kombucha",
+      isPopular: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105168/katherine-sousa-ln2R1wJ8TCM-unsplash_oc6rj6.jpg"
+    },
+    {
+      id: 63,
+      name: "Raspberry Lemonade",
+      price: "$6.00",
+      description: "",
+      category: "kombucha",
+      isPopular: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105168/katherine-sousa-ln2R1wJ8TCM-unsplash_oc6rj6.jpg"
+    },
+    {
+      id: 64,
+      name: "Passion Fruit",
+      price: "$6.00",
+      description: "",
+      category: "kombucha",
+      isPopular: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105168/katherine-sousa-ln2R1wJ8TCM-unsplash_oc6rj6.jpg"
+    },
 
 
-        // Flavoured Sparkling
-        {
-          id: 65,
-          name: "San Pellegrino Aranciata",
-          price: "$7.00",
-          description: "",
-          category: "flavoured-sparkling",
-          isPopular: true,
-          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105430/jamie-street-qpN5MLx1uwk-unsplash_csnj6u.jpg"
-        },
-        {
-          id: 66,
-          name: "San Pellegrino Limonata",
-          price: "$7.00",
-          description: "",
-          category: "flavoured-sparkling",
-          isPopular: true,
-          image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105430/jamie-street-qpN5MLx1uwk-unsplash_csnj6u.jpg"
-        },
+    // Flavoured Sparkling
+    {
+      id: 65,
+      name: "San Pellegrino Aranciata",
+      price: "$7.00",
+      description: "",
+      category: "flavoured-sparkling",
+      isPopular: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105430/jamie-street-qpN5MLx1uwk-unsplash_csnj6u.jpg"
+    },
+    {
+      id: 66,
+      name: "San Pellegrino Limonata",
+      price: "$7.00",
+      description: "",
+      category: "flavoured-sparkling",
+      isPopular: true,
+      image: "https://res.cloudinary.com/dkuvvyaly/image/upload/v1742105430/jamie-street-qpN5MLx1uwk-unsplash_csnj6u.jpg"
+    },
 ];
 
 const Menu = () => {
@@ -734,6 +786,7 @@ const Menu = () => {
   const [filteredItems, setFilteredItems] = useState<MenuItem[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const categoryItemsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const hash = location.hash.replace('#', '');
@@ -751,6 +804,13 @@ const Menu = () => {
   useEffect(() => {
     if (selectedCategory) {
       setFilteredItems(menuItems.filter(item => item.category === selectedCategory));
+      
+      // Scroll to the items section after category is selected
+      setTimeout(() => {
+        if (categoryItemsRef.current) {
+          categoryItemsRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     } else {
       setFilteredItems([]);
     }
@@ -827,7 +887,7 @@ const Menu = () => {
                 </Button>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+              <div ref={categoryItemsRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
                 {groupedItems.regularItems.map((item, index) => (
                   <div 
                     key={item.id}
@@ -866,29 +926,29 @@ const Menu = () => {
                 ))}
               </div>
 
-              {groupedItems.addOns.length > 0 && (
-                <div className="mt-12 mb-6">
-                  <h3 className="text-xl md:text-2xl font-bold mb-6 border-b pb-2 border-stories-green/20">Add-Ons</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {groupedItems.addOns.filter(item => item.name !== "ADD-ONS").map((item, index) => (
-                      <div 
-                        key={item.id}
-                        className={cn(
-                          "bg-white dark:bg-stories-dark/60 rounded-xl overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300",
-                          isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
-                        )}
-                      >
-                        <div className="p-3">
-                          <div className="flex justify-between items-start">
+              {selectedCategory === "coffee" && groupedItems.addOns.length > 0 && (
+                <div className="mt-8 mb-12">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 pb-2 border-stories-green/30 font-playfair">Coffee Add-Ons</h3>
+                  <div className="bg-stories-green/5 p-4 rounded-xl border border-stories-green/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {groupedItems.addOns.map((item, index) => (
+                        <div 
+                          key={item.id}
+                          className={cn(
+                            "bg-white dark:bg-stories-dark/60 rounded-lg overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300 p-3",
+                            isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                          )}
+                        >
+                          <div className="flex justify-between items-start mb-1">
                             <h3 className="font-medium text-sm">{item.name}</h3>
                             <span className="font-medium text-stories-green text-sm">{item.price}</span>
                           </div>
-                          <p className="text-stories-dark/70 dark:text-white/70 text-xs mt-1">
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs">
                             {item.description}
                           </p>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
@@ -913,3 +973,4 @@ const Menu = () => {
 };
 
 export default Menu;
+

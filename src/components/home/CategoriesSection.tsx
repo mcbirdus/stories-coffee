@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Coffee, Cherry, Leaf, GlassWater, Sandwich, BookOpen, CakeSlice } from 'lucide-react';
 import { Link } from 'react-router-dom';
