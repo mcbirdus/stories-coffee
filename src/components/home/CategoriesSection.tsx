@@ -9,7 +9,7 @@ type Category = {
   id: number;
   name: string;
   icon: React.ForwardRefExoticComponent<any>;
-  description: string; // Added description property
+  description: string;
   slug: string;
 };
 
@@ -65,7 +65,7 @@ const categories: Category[] = [
   },
   {
     id: 8,
-    name: "Speciality",
+    name: "Specialty",
     icon: GlassWater,
     description: "Unique signature drinks",
     slug: "speciality",

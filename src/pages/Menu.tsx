@@ -23,6 +23,7 @@ interface MenuItem {
   isNew?: boolean;
   isPopular?: boolean;
   image?: string;
+  isAddOn?: boolean;
 }
 
 const categories: Category[] = [
@@ -70,7 +71,7 @@ const categories: Category[] = [
   },
   {
     id: 8,
-    name: "Speciality",
+    name: "Specialty",
     icon: GlassWater,
     slug: "speciality",
   },
@@ -93,10 +94,16 @@ const categories: Category[] = [
     slug: "flavoured-sparkling",
   },
   {
-    id: 11,
+    id: 12,
     name: "Catering",
     icon: GlassWater,
     slug: "catering",
+  },
+  {
+    id: 13,
+    name: "Add-Ons",
+    icon: CakeSlice,
+    slug: "add-ons",
   },
 ];
 
@@ -757,6 +764,18 @@ const Menu = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const groupedItems = filteredItems.reduce(
+    (acc, item) => {
+      if (item.isAddOn) {
+        acc.addOns.push(item);
+      } else {
+        acc.regularItems.push(item);
+      }
+      return acc;
+    },
+    { regularItems: [] as MenuItem[], addOns: [] as MenuItem[] }
+  );
+
   return (
     <>
       <Header />
@@ -808,8 +827,8 @@ const Menu = () => {
                 </Button>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {filteredItems.map((item, index) => (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+                {groupedItems.regularItems.map((item, index) => (
                   <div 
                     key={item.id}
                     className={cn(
@@ -846,6 +865,33 @@ const Menu = () => {
                   </div>
                 ))}
               </div>
+
+              {groupedItems.addOns.length > 0 && (
+                <div className="mt-12 mb-6">
+                  <h3 className="text-xl md:text-2xl font-bold mb-6 border-b pb-2 border-stories-green/20">Add-Ons</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {groupedItems.addOns.filter(item => item.name !== "ADD-ONS").map((item, index) => (
+                      <div 
+                        key={item.id}
+                        className={cn(
+                          "bg-white dark:bg-stories-dark/60 rounded-xl overflow-hidden shadow-sm hover-lift border border-stories-green/10 group transition-all duration-300",
+                          isVisible && `opacity-0 animate-fade-up delay-${Math.min(index * 100 + 300, 1000)}`
+                        )}
+                      >
+                        <div className="p-3">
+                          <div className="flex justify-between items-start">
+                            <h3 className="font-medium text-sm">{item.name}</h3>
+                            <span className="font-medium text-stories-green text-sm">{item.price}</span>
+                          </div>
+                          <p className="text-stories-dark/70 dark:text-white/70 text-xs mt-1">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
 

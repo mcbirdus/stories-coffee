@@ -8,8 +8,14 @@ import GalleryPreview from "@/components/home/GalleryPreview";
 import NewsletterSection from "@/components/home/NewsletterSection";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { useEffect } from "react";
 
 const Index = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Header />
