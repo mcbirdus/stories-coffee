@@ -4,10 +4,12 @@ import { MapPin, Phone, Mail, SendHorizonal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 
 const NewsletterSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -32,12 +34,29 @@ const NewsletterSection = () => {
     };
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, you would submit this to your API
-    console.log("Subscribing email:", email);
-    setEmail("");
-    alert("Thanks for subscribing to our newsletter!");
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate API call with a timeout
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // For demo purposes - in a real implementation you would send to an API endpoint
+      console.log("Subscribing email to laith@nexusbyte.com.au:", email);
+      
+      toast.success("Newsletter subscription successful!", {
+        description: "Thank you for subscribing to our newsletter!"
+      });
+      
+      setEmail("");
+    } catch (error) {
+      toast.error("Subscription failed", {
+        description: "Please try again later."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -92,7 +111,9 @@ const NewsletterSection = () => {
                 <div>
                   <h3 className="font-bold text-lg">Email</h3>
                   <p className="text-stories-dark/70 dark:text-white/70">
-                    info@storiescoffee.com
+                    <a href="mailto:laith@nexusbyte.com.au" className="hover:text-stories-green transition-colors">
+                      laith@nexusbyte.com.au
+                    </a>
                   </p>
                 </div>
               </div>
@@ -101,39 +122,53 @@ const NewsletterSection = () => {
           
           {/* Newsletter */}
           <div className={cn(
-            "bg-white dark:bg-stories-dark p-8 md:p-12 rounded-xl shadow-md glass-dark",
+            "bg-white dark:bg-stories-dark p-6 sm:p-8 md:p-12 rounded-xl shadow-md glass-dark",
             isVisible ? "opacity-0 animate-fade-in delay-300" : "opacity-0"
           )}>
             <span className="inline-block px-4 py-1 rounded-full bg-stories-green/10 text-stories-green dark:bg-stories-green/20 text-sm font-medium mb-4">
               Stay Updated
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Join Our Newsletter</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">Join Our Newsletter</h2>
             <p className="text-stories-dark/70 dark:text-white/70 mb-8">
               Subscribe to receive updates on our latest offers, new menu items, and exclusive events.
             </p>
             
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <label htmlFor="email" className="block font-medium">
+                <label htmlFor="newsletter-email" className="block font-medium">
                   Email Address
                 </label>
                 <Input
-                  id="email"
+                  id="newsletter-email"
                   type="email"
                   placeholder="youremail@example.com"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full rounded-lg focus:ring-stories-green focus:border-stories-green"
+                  disabled={isSubmitting}
                 />
               </div>
               
               <Button 
                 type="submit"
-                className="w-full bg-stories-green hover:bg-stories-green/90 text-white rounded-lg py-6"
+                className="w-full bg-stories-green hover:bg-stories-green/90 text-white rounded-lg py-4 sm:py-6"
+                disabled={isSubmitting}
               >
-                Subscribe
-                <SendHorizonal className="ml-2 h-5 w-5" />
+                {isSubmitting ? (
+                  <span className="flex items-center">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Subscribing...
+                  </span>
+                ) : (
+                  <>
+                    Subscribe
+                    <SendHorizonal className="ml-2 h-5 w-5" />
+                  </>
+                )}
               </Button>
               
               <p className="text-xs text-stories-dark/60 dark:text-white/60 text-center">

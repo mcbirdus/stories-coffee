@@ -6,10 +6,9 @@ import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { toast } from "sonner";
 
 const Contact = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,13 +23,17 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Simulate form submission for demo purposes
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      // In a real app, you would post to an API endpoint
+      console.log("Contact form submitted to laith@nexusbyte.com.au:", formData);
+      
       setFormData({
         name: "",
         email: "",
@@ -43,7 +46,15 @@ const Contact = () => {
         title: "Message Sent",
         description: "Thank you for contacting us. We'll get back to you soon!",
       });
-    }, 1500);
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Failed to send message",
+        description: "Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -58,8 +69,8 @@ const Contact = () => {
               <span className="inline-block px-4 py-1 rounded-full bg-stories-green/10 text-stories-green dark:bg-stories-green/20 text-sm font-medium mb-4 animate-fade-in">
                 Contact Us
               </span>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-up">Get In Touch</h1>
-              <p className="text-lg text-stories-dark/70 dark:text-white/70 mb-8 opacity-0 animate-fade-up delay-200">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 animate-fade-up">Get In Touch</h1>
+              <p className="text-base sm:text-lg text-stories-dark/70 dark:text-white/70 mb-8 opacity-0 animate-fade-up delay-200">
                 Have questions or feedback? We'd love to hear from you. Reach out to us using any of the methods below.
               </p>
             </div>
@@ -67,13 +78,13 @@ const Contact = () => {
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-16">
+        <section className="py-12 sm:py-16">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
               {/* Contact Form */}
-              <div className="bg-white dark:bg-stories-dark/60 rounded-xl p-8 shadow-md order-2 lg:order-1 animate-fade-in delay-300">
+              <div className="bg-white dark:bg-stories-dark/60 rounded-xl p-6 sm:p-8 shadow-md order-2 lg:order-1 animate-fade-in delay-300">
                 <h2 className="text-2xl md:text-3xl font-bold mb-6 font-playfair">Send Us a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label htmlFor="name" className="block font-medium">
@@ -86,6 +97,8 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="Your name"
                         required
+                        disabled={isSubmitting}
+                        className="w-full"
                       />
                     </div>
                     <div className="space-y-2">
@@ -100,6 +113,8 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="your.email@example.com"
                         required
+                        disabled={isSubmitting}
+                        className="w-full"
                       />
                     </div>
                   </div>
@@ -115,6 +130,8 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="Your phone"
+                        disabled={isSubmitting}
+                        className="w-full"
                       />
                     </div>
                     <div className="space-y-2">
@@ -128,6 +145,8 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="What's this about?"
                         required
+                        disabled={isSubmitting}
+                        className="w-full"
                       />
                     </div>
                   </div>
@@ -144,12 +163,14 @@ const Contact = () => {
                       placeholder="Your message here..."
                       rows={5}
                       required
+                      disabled={isSubmitting}
+                      className="w-full"
                     />
                   </div>
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-stories-green hover:bg-stories-green/90 py-6"
+                    className="w-full bg-stories-green hover:bg-stories-green/90 py-4 sm:py-6"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
@@ -179,7 +200,7 @@ const Contact = () => {
                 
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start">
-                    <div className="bg-stories-green/10 dark:bg-stories-green/20 h-12 w-12 rounded-full flex items-center justify-center mr-4">
+                    <div className="bg-stories-green/10 dark:bg-stories-green/20 h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                       <MapPin className="h-6 w-6 text-stories-green" />
                     </div>
                     <div>
@@ -192,7 +213,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-stories-green/10 dark:bg-stories-green/20 h-12 w-12 rounded-full flex items-center justify-center mr-4">
+                    <div className="bg-stories-green/10 dark:bg-stories-green/20 h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                       <Phone className="h-6 w-6 text-stories-green" />
                     </div>
                     <div>
@@ -206,21 +227,21 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-stories-green/10 dark:bg-stories-green/20 h-12 w-12 rounded-full flex items-center justify-center mr-4">
+                    <div className="bg-stories-green/10 dark:bg-stories-green/20 h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                       <Mail className="h-6 w-6 text-stories-green" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-1">Email Us</h3>
                       <p className="text-stories-dark/70 dark:text-white/70">
-                        <a href="mailto:info@storiescoffee.com" className="hover:text-stories-green transition-colors">
-                          info@storiescoffee.com
+                        <a href="mailto:laith@nexusbyte.com.au" className="hover:text-stories-green transition-colors">
+                          laith@nexusbyte.com.au
                         </a>
                       </p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-stories-green/10 dark:bg-stories-green/20 h-12 w-12 rounded-full flex items-center justify-center mr-4">
+                    <div className="bg-stories-green/10 dark:bg-stories-green/20 h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                       <Clock className="h-6 w-6 text-stories-green" />
                     </div>
                     <div>
@@ -250,36 +271,36 @@ const Contact = () => {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-stories-light-gray dark:bg-stories-dark/60">
+        <section className="py-12 sm:py-16 bg-stories-light-gray dark:bg-stories-dark/60">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl font-bold mb-4 font-playfair">Frequently Asked Questions</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 font-playfair">Frequently Asked Questions</h2>
               <p className="text-stories-dark/70 dark:text-white/70">
                 Find answers to commonly asked questions about our services, products, and more.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white dark:bg-stories-dark rounded-xl p-6 shadow-sm hover-lift">
-                <h3 className="font-bold text-xl mb-2">Do you offer catering services?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
+              <div className="bg-white dark:bg-stories-dark rounded-xl p-5 sm:p-6 shadow-sm hover-lift">
+                <h3 className="font-bold text-lg sm:text-xl mb-2">Do you offer catering services?</h3>
                 <p className="text-stories-dark/70 dark:text-white/70">
                   Yes, we offer catering for events of all sizes. Please contact us directly for more information and to discuss your specific requirements.
                 </p>
               </div>
-              <div className="bg-white dark:bg-stories-dark rounded-xl p-6 shadow-sm hover-lift">
-                <h3 className="font-bold text-xl mb-2">Are your ingredients organic?</h3>
+              <div className="bg-white dark:bg-stories-dark rounded-xl p-5 sm:p-6 shadow-sm hover-lift">
+                <h3 className="font-bold text-lg sm:text-xl mb-2">Are your ingredients organic?</h3>
                 <p className="text-stories-dark/70 dark:text-white/70">
                   We source organic ingredients whenever possible and prioritize local, sustainable suppliers for all our menu items.
                 </p>
               </div>
-              <div className="bg-white dark:bg-stories-dark rounded-xl p-6 shadow-sm hover-lift">
-                <h3 className="font-bold text-xl mb-2">Do you have vegan options?</h3>
+              <div className="bg-white dark:bg-stories-dark rounded-xl p-5 sm:p-6 shadow-sm hover-lift">
+                <h3 className="font-bold text-lg sm:text-xl mb-2">Do you have vegan options?</h3>
                 <p className="text-stories-dark/70 dark:text-white/70">
                   Absolutely! We have a wide range of plant-based milks and vegan food options. Just ask our staff for recommendations.
                 </p>
               </div>
-              <div className="bg-white dark:bg-stories-dark rounded-xl p-6 shadow-sm hover-lift">
-                <h3 className="font-bold text-xl mb-2">Is there parking available?</h3>
+              <div className="bg-white dark:bg-stories-dark rounded-xl p-5 sm:p-6 shadow-sm hover-lift">
+                <h3 className="font-bold text-lg sm:text-xl mb-2">Is there parking available?</h3>
                 <p className="text-stories-dark/70 dark:text-white/70">
                   World Square has a parking garage, and there are several public parking options nearby. We're also easily accessible by public transport.
                 </p>
