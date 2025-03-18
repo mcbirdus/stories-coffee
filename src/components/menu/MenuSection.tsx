@@ -446,7 +446,7 @@ const MenuSection = () => {
                     {category.name}
                   </h2>
                   
-                  <div className="p-4 rounded-lg bg-white dark:bg-stories-dark/60 shadow-sm">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
                     {category.items.map((item, idx) => (
                       <MenuItemCard
                         key={idx}

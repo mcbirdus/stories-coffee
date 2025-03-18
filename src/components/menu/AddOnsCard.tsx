@@ -17,15 +17,17 @@ const AddOnsCard: FC<AddOnsCardProps> = ({ items, className }) => {
   
   return (
     <div className={cn(
-      "p-4 rounded-lg bg-stories-cream/80 dark:bg-stories-dark/80 border border-stories-green/20 mt-4 mb-8",
+      "mt-4 mb-8",
       className
     )}>
-      <h3 className="font-bold text-stories-green mb-3">ADD-ONS</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <h3 className="font-bold text-xl text-stories-green mb-3 border-b border-stories-green/30 pb-2">ADD-ONS</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         {items.map((item, index) => (
-          <div key={index} className="flex justify-between items-center py-1 border-b border-stories-green/10 last:border-0">
-            <span className="text-sm">{item.name}</span>
-            <span className="text-sm font-medium">{item.price}</span>
+          <div key={index} className="p-4 rounded-lg bg-stories-cream/80 dark:bg-stories-dark/80 border border-stories-green/20">
+            <div className="flex justify-between items-start">
+              <h4 className="font-bold text-stories-green">{item.name}</h4>
+              <span className="text-stories-green font-medium ml-2">{item.price}</span>
+            </div>
           </div>
         ))}
       </div>

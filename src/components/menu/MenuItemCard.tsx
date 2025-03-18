@@ -19,11 +19,16 @@ const MenuItemCard: FC<MenuItemCardProps> = ({
 }) => {
   return (
     <div className={cn(
-      "flex items-center gap-4 py-2 border-b border-stories-green/10 last:border-0",
+      "p-4 rounded-lg bg-stories-cream/80 dark:bg-stories-dark/80 border border-stories-green/20 flex flex-col h-full",
       className
     )}>
+      <div className="flex justify-between items-start mb-2">
+        <h3 className="font-bold text-stories-green">{name}</h3>
+        <span className="text-stories-green font-medium ml-2">{price}</span>
+      </div>
+      {description && <p className="text-stories-dark/70 dark:text-white/70 text-xs mb-3">{description}</p>}
       {image && (
-        <div className="w-12 h-12 flex-shrink-0 rounded-md overflow-hidden">
+        <div className="w-full h-32 rounded-md overflow-hidden mt-auto">
           <img 
             src={image} 
             alt={name} 
@@ -31,13 +36,6 @@ const MenuItemCard: FC<MenuItemCardProps> = ({
           />
         </div>
       )}
-      <div className="flex-grow flex justify-between items-center">
-        <div>
-          <h3 className="text-sm font-medium">{name}</h3>
-          {description && <p className="text-stories-dark/70 dark:text-white/70 text-xs mt-1">{description}</p>}
-        </div>
-        <span className="text-sm font-medium ml-2 flex-shrink-0">{price}</span>
-      </div>
     </div>
   );
 };
