@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -42,14 +41,11 @@ const Contact = () => {
         message: "",
       });
       
-      toast({
-        title: "Message Sent",
+      toast.success("Message Sent", {
         description: "Thank you for contacting us. We'll get back to you soon!",
       });
     } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Failed to send message",
+      toast.error("Failed to send message", {
         description: "Please try again later.",
       });
     } finally {
