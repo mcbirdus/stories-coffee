@@ -26,7 +26,7 @@ const MenuItemCard: FC<MenuItemCardProps> = ({
         <h3 className="font-bold text-stories-green">{name}</h3>
         <span className="text-stories-green font-medium ml-2">{price}</span>
       </div>
-      {description && <p className="text-stories-dark/70 dark:text-white/70 text-xs mb-3">{description}</p>}
+      {description && <p className="text-stories-dark/70 dark:text-white/70 text-sm mb-3">{description}</p>}
       {image && (
         <div className="w-full h-32 rounded-md overflow-hidden mt-auto">
           <img 

@@ -17,7 +17,7 @@ const AddOnsCard: FC<AddOnsCardProps> = ({ items, className }) => {
   
   return (
     <div className={cn(
-      "mt-4 mb-8",
+      "mt-6 mb-10",
       className
     )}>
       <h3 className="font-bold text-xl text-stories-green mb-3 border-b border-stories-green/30 pb-2">ADD-ONS</h3>
