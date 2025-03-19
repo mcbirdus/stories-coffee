@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
-import { Coffee, Salad, UtensilsCrossed, Sandwich, Cookie, Leaf, Banana, Award, Apple, Cherry, Wine, PanelTop } from "lucide-react";
+import { Coffee, Salad, UtensilsCrossed, Sandwich, Cookie, Leaf, Banana, Award, Apple, Cherry, Wine } from "lucide-react";
 import MenuItemCard from "./MenuItemCard";
 import AddOnsCard from "./AddOnsCard";
 
@@ -430,38 +430,46 @@ const MenuSection = () => {
     <section className="py-12 lg:py-16 bg-stories-cream/30 dark:bg-stories-dark/95">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 font-playfair text-stories-green">
-            Our Menu
-          </h1>
-          <div className="w-24 h-1 bg-stories-green mx-auto mb-6"></div>
-          <p className="text-stories-dark/70 dark:text-white/70 max-w-2xl mx-auto">
-            Experience our artisanal offerings, crafted with the finest ingredients and served with love.
-            Browse our menu categories below.
-          </p>
+          <div className="max-w-4xl mx-auto relative">
+            <div className="absolute inset-0 -z-10 opacity-5 bg-[url('https://images.unsplash.com/photo-1464979681340-bdd28a61699e?q=80&w=2580')] bg-center bg-cover rounded-xl"></div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 font-playfair text-stories-green">
+              Our Menu
+            </h1>
+            <div className="flex justify-center items-center gap-3 mb-6">
+              <div className="w-16 h-px bg-stories-green"></div>
+              <UtensilsCrossed className="h-7 w-7 text-stories-green" />
+              <div className="w-16 h-px bg-stories-green"></div>
+            </div>
+            <p className="text-stories-dark/70 dark:text-white/70 max-w-2xl mx-auto italic">
+              Experience our artisanal offerings, crafted with the finest ingredients and served with love.
+            </p>
+          </div>
         </div>
         
         <div className="flex flex-col md:flex-row">
           {/* Sidebar Categories */}
           <div className="md:w-1/4 lg:w-1/5 mb-8 md:mb-0 md:pr-6">
             <div className="bg-white dark:bg-stories-dark/60 p-5 rounded-xl shadow-md sticky top-24 border border-stories-green/10">
-              <h2 className="text-xl font-bold mb-6 font-playfair text-stories-green border-b border-stories-green/20 pb-2">
-                Categories
-              </h2>
-              <div className="space-y-2">
+              <div className="flex items-center gap-2 mb-4">
+                <h2 className="text-xl font-bold font-playfair text-stories-green pb-1 border-b-2 border-stories-green/20 w-full">
+                  Menu Categories
+                </h2>
+              </div>
+              <div className="space-y-1.5">
                 {menuData.map((category) => (
                   <button
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
-                    className={`block w-full text-left px-4 py-3 rounded-lg transition-colors flex items-center ${
+                    className={`block w-full text-left py-2.5 px-4 rounded-lg transition-colors flex items-center ${
                       activeCategory === category.id
-                        ? "bg-stories-green text-white shadow-sm"
+                        ? "bg-stories-green text-white font-medium shadow-sm"
                         : "hover:bg-stories-green/10 dark:hover:bg-stories-green/20"
                     }`}
                   >
-                    <span className="mr-2">
+                    <span className="mr-2 opacity-75">
                       {getCategoryIcon(category.id)}
                     </span>
-                    <span className="font-medium">{category.name}</span>
+                    <span>{category.name}</span>
                   </button>
                 ))}
               </div>
@@ -471,7 +479,7 @@ const MenuSection = () => {
           {/* Menu Items */}
           <div className="md:w-3/4 lg:w-4/5">
             <div className="bg-white dark:bg-stories-dark/40 p-6 md:p-8 rounded-xl shadow-md border border-stories-green/10">
-              <div className="space-y-16">
+              <div className="space-y-14">
                 {menuData.map((category) => (
                   <div 
                     key={category.id} 
@@ -479,18 +487,19 @@ const MenuSection = () => {
                     ref={(el) => (menuRefs.current[category.id] = el)}
                     className="scroll-mt-24"
                   >
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="bg-stories-green/10 dark:bg-stories-green/20 h-10 w-10 rounded-full flex items-center justify-center">
-                        {getCategoryIcon(category.id)}
+                    <div className="flex items-center gap-3 mb-6 relative">
+                      <div className="absolute top-0 left-0 right-0 h-px bg-stories-green/10 -z-10"></div>
+                      <div className="bg-white dark:bg-stories-dark px-4 py-1 -ml-4 flex items-center gap-2 z-10">
+                        <div className="bg-stories-green/10 dark:bg-stories-green/20 h-10 w-10 rounded-full flex items-center justify-center">
+                          {getCategoryIcon(category.id)}
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-bold font-playfair text-stories-green">
+                          {category.name}
+                        </h2>
                       </div>
-                      <h2 className="text-2xl md:text-3xl font-bold font-playfair text-stories-green">
-                        {category.name}
-                      </h2>
                     </div>
                     
-                    <div className="h-1 w-full bg-stories-green/10 mb-8 rounded-full"></div>
-                    
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                       {category.items.map((item, idx) => (
                         <MenuItemCard
                           key={idx}

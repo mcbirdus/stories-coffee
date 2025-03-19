@@ -19,24 +19,28 @@ const MenuItemCard: FC<MenuItemCardProps> = ({
 }) => {
   return (
     <div className={cn(
-      "p-5 rounded-lg bg-white dark:bg-stories-dark border border-stories-green/20 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full",
+      "p-6 rounded-lg bg-white dark:bg-stories-dark border border-stories-green/20 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden",
       className
     )}>
+      <div className="relative z-10">
+        <div className="flex justify-between items-start gap-3 mb-3">
+          <h3 className="font-bold text-stories-green text-xl font-playfair">{name}</h3>
+          <span className="text-stories-green font-semibold px-3 py-1 rounded-full text-sm bg-stories-green/10 whitespace-nowrap">{price}</span>
+        </div>
+        
+        {description && (
+          <p className="text-stories-dark/70 dark:text-white/70 text-sm italic mb-4">{description}</p>
+        )}
+      </div>
+      
       {image && (
-        <div className="w-full h-40 rounded-md overflow-hidden mb-4">
+        <div className="absolute top-0 right-0 w-20 h-20 opacity-10 -mr-2 -mt-2">
           <img 
             src={image} 
-            alt={name} 
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            alt="" 
+            className="w-full h-full object-cover rounded-full"
           />
         </div>
-      )}
-      <div className="flex justify-between items-start mb-2">
-        <h3 className="font-bold text-stories-green text-lg font-playfair">{name}</h3>
-        <span className="text-stories-green font-medium ml-2 bg-stories-green/10 px-2 py-0.5 rounded-full text-sm">{price}</span>
-      </div>
-      {description && (
-        <p className="text-stories-dark/70 dark:text-white/70 text-sm italic mb-3">{description}</p>
       )}
     </div>
   );
