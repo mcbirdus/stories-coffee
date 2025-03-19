@@ -1,7 +1,7 @@
 
 import { FC } from "react";
 import { cn } from "@/lib/utils";
-import { PlusCircle } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export interface AddOnItem {
   name: string;
@@ -18,24 +18,22 @@ const AddOnsCard: FC<AddOnsCardProps> = ({ items, className }) => {
   
   return (
     <div className={cn(
-      "mt-6 mb-10",
+      "mt-4 mb-8 bg-stories-cream/20 dark:bg-stories-green/5 rounded-lg p-4 border border-stories-green/10",
       className
     )}>
-      <div className="flex items-center gap-2 mb-4">
-        <PlusCircle className="h-5 w-5 text-stories-green" />
-        <h3 className="font-bold text-xl text-stories-green font-playfair italic">ADD ONS</h3>
+      <div className="flex items-center gap-2 mb-3 border-b border-stories-green/20 pb-2">
+        <Sparkles className="h-4 w-4 text-stories-green" />
+        <h3 className="font-bold text-lg text-stories-green font-playfair italic">ADD ONS</h3>
       </div>
       
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
         {items.map((item, index) => (
           <div 
             key={index} 
-            className="p-3 rounded-lg bg-white dark:bg-stories-dark border border-stories-green/20 shadow-sm hover:shadow-md transition-all duration-200"
+            className="flex justify-between items-center border-b border-dotted border-stories-green/20 pb-1 mb-1"
           >
-            <div className="flex justify-between items-center flex-wrap gap-1">
-              <h4 className="font-medium text-stories-green">{item.name}</h4>
-              <span className="text-stories-green text-sm bg-stories-green/10 px-2 py-0.5 rounded-full">{item.price}</span>
-            </div>
+            <span className="text-stories-dark/90 dark:text-white/90 text-sm">{item.name}</span>
+            <span className="text-stories-green text-sm font-medium">{item.price}</span>
           </div>
         ))}
       </div>

@@ -19,22 +19,31 @@ const MenuItemCard: FC<MenuItemCardProps> = ({
 }) => {
   return (
     <div className={cn(
-      "p-6 rounded-lg bg-white dark:bg-stories-dark border border-stories-green/20 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden",
+      "p-4 relative flex justify-between items-start border-b border-dashed border-stories-green/30 pb-4 mb-4 group hover:bg-stories-green/5 rounded-md transition-all duration-300",
       className
     )}>
-      <div className="relative z-10">
-        <div className="flex justify-between items-start gap-3 mb-3">
-          <h3 className="font-bold text-stories-green text-xl font-playfair">{name}</h3>
-          <span className="text-stories-green font-semibold px-3 py-1 rounded-full text-sm bg-stories-green/10 whitespace-nowrap">{price}</span>
+      {/* Item details */}
+      <div className="flex-1 pr-4">
+        <div className="flex items-baseline gap-2 mb-1">
+          <h3 className="font-playfair font-bold text-stories-green text-lg">{name}</h3>
+          <div className="flex-grow border-b border-dotted border-stories-green/30"></div>
         </div>
         
         {description && (
-          <p className="text-stories-dark/70 dark:text-white/70 text-sm italic mb-4">{description}</p>
+          <p className="text-stories-dark/70 dark:text-white/70 text-sm italic mt-1">{description}</p>
         )}
       </div>
       
+      {/* Price tag */}
+      <div className="flex items-center whitespace-nowrap">
+        <span className="text-stories-green font-playfair font-semibold text-md">
+          {price}
+        </span>
+      </div>
+      
+      {/* Background image (subtle) */}
       {image && (
-        <div className="absolute top-0 right-0 w-20 h-20 opacity-10 -mr-2 -mt-2">
+        <div className="absolute top-1/2 right-2 -translate-y-1/2 w-12 h-12 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
           <img 
             src={image} 
             alt="" 
