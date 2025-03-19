@@ -18,7 +18,7 @@ const HeroSection = () => {
           </span>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up">
-            Crafting
+            Craftin
             <span className="text-stories-green"> Stories </span>
             in Every Cup
           </h1>
