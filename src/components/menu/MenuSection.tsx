@@ -1,5 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
+import { Coffee, Salad, UtensilsCrossed, Sandwich, Cookie, Leaf, Banana, Award, Apple, Cherry, Wine, PanelTop } from "lucide-react";
 import MenuItemCard from "./MenuItemCard";
 import AddOnsCard from "./AddOnsCard";
 
@@ -17,6 +18,25 @@ interface MenuCategory {
   items: MenuItem[];
   addOns?: { name: string; price: string }[];
 }
+
+// Icon mapping for categories
+const getCategoryIcon = (categoryId: string) => {
+  const icons: Record<string, JSX.Element> = {
+    "acai": <Banana className="h-5 w-5" />,
+    "main-menu": <Salad className="h-5 w-5" />,
+    "sandwiches": <Sandwich className="h-5 w-5" />,
+    "coffee": <Coffee className="h-5 w-5" />,
+    "iced-coffee": <Coffee className="h-5 w-5" />,
+    "teas": <Leaf className="h-5 w-5" />,
+    "smoothies": <Cherry className="h-5 w-5" />,
+    "specialty": <Award className="h-5 w-5" />,
+    "cold-pressed-juices": <Apple className="h-5 w-5" />,
+    "kombucha": <Wine className="h-5 w-5" />,
+    "flavored-sparkling": <Wine className="h-5 w-5" />,
+  };
+  
+  return icons[categoryId] || <UtensilsCrossed className="h-5 w-5" />;
+};
 
 // Menu data
 const menuData: MenuCategory[] = [
@@ -407,25 +427,41 @@ const MenuSection = () => {
   }, [activeCategory]);
 
   return (
-    <section className="py-12 lg:py-16">
+    <section className="py-12 lg:py-16 bg-stories-cream/30 dark:bg-stories-dark/95">
       <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 font-playfair text-stories-green">
+            Our Menu
+          </h1>
+          <div className="w-24 h-1 bg-stories-green mx-auto mb-6"></div>
+          <p className="text-stories-dark/70 dark:text-white/70 max-w-2xl mx-auto">
+            Experience our artisanal offerings, crafted with the finest ingredients and served with love.
+            Browse our menu categories below.
+          </p>
+        </div>
+        
         <div className="flex flex-col md:flex-row">
           {/* Sidebar Categories */}
           <div className="md:w-1/4 lg:w-1/5 mb-8 md:mb-0 md:pr-6">
-            <div className="bg-white dark:bg-stories-dark/60 p-4 rounded-xl shadow-sm sticky top-24">
-              <h2 className="text-xl font-bold mb-4 font-playfair">Categories</h2>
+            <div className="bg-white dark:bg-stories-dark/60 p-5 rounded-xl shadow-md sticky top-24 border border-stories-green/10">
+              <h2 className="text-xl font-bold mb-6 font-playfair text-stories-green border-b border-stories-green/20 pb-2">
+                Categories
+              </h2>
               <div className="space-y-2">
                 {menuData.map((category) => (
                   <button
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
-                    className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${
+                    className={`block w-full text-left px-4 py-3 rounded-lg transition-colors flex items-center ${
                       activeCategory === category.id
-                        ? "bg-stories-green text-white"
+                        ? "bg-stories-green text-white shadow-sm"
                         : "hover:bg-stories-green/10 dark:hover:bg-stories-green/20"
                     }`}
                   >
-                    {category.name}
+                    <span className="mr-2">
+                      {getCategoryIcon(category.id)}
+                    </span>
+                    <span className="font-medium">{category.name}</span>
                   </button>
                 ))}
               </div>
@@ -434,35 +470,44 @@ const MenuSection = () => {
 
           {/* Menu Items */}
           <div className="md:w-3/4 lg:w-4/5">
-            <div className="space-y-12">
-              {menuData.map((category) => (
-                <div 
-                  key={category.id} 
-                  id={category.id}
-                  ref={(el) => (menuRefs.current[category.id] = el)}
-                  className="scroll-mt-24"
-                >
-                  <h2 className="text-2xl md:text-3xl font-bold mb-6 font-playfair border-b-2 border-stories-green/30 pb-2">
-                    {category.name}
-                  </h2>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-                    {category.items.map((item, idx) => (
-                      <MenuItemCard
-                        key={idx}
-                        name={item.name}
-                        description={item.description}
-                        price={item.price}
-                        image={item.image}
-                      />
-                    ))}
+            <div className="bg-white dark:bg-stories-dark/40 p-6 md:p-8 rounded-xl shadow-md border border-stories-green/10">
+              <div className="space-y-16">
+                {menuData.map((category) => (
+                  <div 
+                    key={category.id} 
+                    id={category.id}
+                    ref={(el) => (menuRefs.current[category.id] = el)}
+                    className="scroll-mt-24"
+                  >
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="bg-stories-green/10 dark:bg-stories-green/20 h-10 w-10 rounded-full flex items-center justify-center">
+                        {getCategoryIcon(category.id)}
+                      </div>
+                      <h2 className="text-2xl md:text-3xl font-bold font-playfair text-stories-green">
+                        {category.name}
+                      </h2>
+                    </div>
+                    
+                    <div className="h-1 w-full bg-stories-green/10 mb-8 rounded-full"></div>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {category.items.map((item, idx) => (
+                        <MenuItemCard
+                          key={idx}
+                          name={item.name}
+                          description={item.description}
+                          price={item.price}
+                          image={item.image}
+                        />
+                      ))}
+                    </div>
+                    
+                    {category.addOns && category.addOns.length > 0 && (
+                      <AddOnsCard items={category.addOns} />
+                    )}
                   </div>
-                  
-                  {category.addOns && category.addOns.length > 0 && (
-                    <AddOnsCard items={category.addOns} />
-                  )}
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
