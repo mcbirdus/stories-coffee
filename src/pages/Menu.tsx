@@ -35,7 +35,7 @@ const categories: Category[] = [
   },
   {
     id: 2,
-    name: "Main Meu",
+    name: "Main Menu",
     icon: BookOpen,
     slug: "main-menu",
   },
