@@ -41,7 +41,7 @@ const categories: Category[] = [
   },
   {
     id: 3,
-    name: "Sandwiches10",
+    name: "Sandwiches",
     icon: Sandwich,
     slug: "sandwiches",
   },
